@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/p2.xsl"?>
+<rdf:RDF xmlns="http://usefulinc.com/ns/doap#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:asfext="http://projects.apache.org/ns/asfext#" xml:lang="en">
+  <Project rdf:about="http://perl.apache.org/">
+    <name>Apache mod_perl</name>
+    <homepage rdf:resource="http://perl.apache.org/"/>
+    <programming-language>C</programming-language>
+    <programming-language>Perl</programming-language>
+    <category rdf:resource="http://projects.apache.org/category/httpd-module"/>
+    <license rdf:resource="http://usefulinc.com/doap/licenses/asl20"/>
+    <bug-database rdf:resource="http://perl.apache.org/bugs/"/>
+    <download-page rdf:resource="http://apache.org/dist/perl/"/>
+    <asfext:pmc rdf:resource="http://perl.apache.org/"/>
+
+    <shortdesc xml:lang="en">
+    The Perl interface to the Apache API
+    </shortdesc>
+
+    <description xml:lang="en">
+mod_perl is a unique piece of software that integrates the power of
+Perl with the flexibility and stability of the Apache Web server.
+With mod_perl, you can harness the power of the full Apache API with
+Perl and develop Web applications quickly, without sacrificing
+performance.
+    </description>
+
+    <repository>
+      <SVNRepository>
+        <browse rdf:resource="http://svn.apache.org/viewvc/perl/modperl/trunk/"/>
+        <location rdf:resource="http://svn.apache.org/repos/asf/perl/modperl/trunk/"/>
+      </SVNRepository>
+    </repository>
+
+    <repository>
+      <SVNRepository>
+        <browse rdf:resource="http://svn.apache.org/viewcvs.cgi/perl/modperl/docs/trunk"/>
+        <location rdf:resource="http://svn.apache.org/repos/asf/perl/modperl/docs/trunk"/>
+      </SVNRepository>
+    </repository>
+
+    <repository>
+      <SVNRepository>
+        <browse rdf:resource="http://svn.apache.org/viewcvs.cgi/perl/Apache-Test/trunk/"/>
+        <location rdf:resource="http://svn.apache.org/repos/asf/perl/Apache-Test/trunk/"/>
+      </SVNRepository>
+    </repository>
+
+    <repository>
+      <SVNRepository>
+        <browse rdf:resource="http://svn.apache.org/viewcvs.cgi/perl/Apache-SizeLimit/trunk/"/>
+        <location rdf:resource="http://svn.apache.org/repos/asf/perl/Apache-SizeLimit/trunk/"/>
+      </SVNRepository>
+    </repository>
+
+    <mailing-list rdf:resource="http://perl.apache.org/maillist/index.html"/>
+   
+    <release>
+      <Version>
+        <name>mod_perl 2.0</name>
+        <created>2013-04-17</created>
+        <revision>2.0.8</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>mod_perl 1.0</name>
+        <created>2009-05-11</created>
+        <revision>1.31</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>mod_perl 1.0</name>
+        <created>2007-03-29</created>
+        <revision>1.30</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache-Test</name>
+        <created>2006-11-30</created>
+        <revision>1.29</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache-SizeLimit</name>
+        <created>2007-03-29</created>
+        <revision>0.91</revision>
+      </Version>
+    </release>
+
+
+  </Project>
+
+</rdf:RDF>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl"?>
+<rdf:RDF xml:lang="en"
+         xmlns="http://usefulinc.com/ns/doap#" 
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+         xmlns:asfext="http://projects.apache.org/ns/asfext#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+   
+         http://www.apache.org/licenses/LICENSE-2.0
+   
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+  <Project rdf:about="http://subversion.apache.org/">
+    <created>2010-12-28</created>
+    <license rdf:resource="http://usefulinc.com/doap/licenses/asl20" />
+    <name>Apache Subversion</name>
+    <homepage rdf:resource="http://subversion.apache.org/" />
+    <asfext:pmc rdf:resource="http://subversion.apache.org" />
+    <shortdesc>Enterprise-class centralized version control for the masses</shortdesc>
+    <description>Subversion exists to be universally recognized and adopted as an open-source, centralized version control system characterized by its reliability as a safe haven for valuable data; the simplicity of its model and usage; and its ability to support the needs of a wide variety of users and projects, from individuals to large-scale enterprise operations.</description>
+    <bug-database rdf:resource="http://subversion.tigris.org/issues/" />
+    <mailing-list rdf:resource="http://subversion.apache.org/mailing-lists.html" />
+    <download-page rdf:resource="http://subversion.apache.org/source-code.html" />
+    <programming-language>C</programming-language>
+    <category rdf:resource="http://projects.apache.org/category/build-management" />
+    <release>
+      <Version>
+        <name>Recommended current 1.8 release</name>
+        <created>2014-08-11</created>
+        <revision>1.8.10</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Current 1.7 release</name>
+        <created>2014-08-11</created>
+        <revision>1.7.18</revision>
+      </Version>
+    </release>
+    <repository>
+      <SVNRepository>
+        <location rdf:resource="http://svn.apache.org/repos/asf/subversion/trunk"/>
+        <browse rdf:resource="http://svn.apache.org/viewvc/subversion/trunk/"/>
+      </SVNRepository>
+    </repository>
+  </Project>
+</rdf:RDF>

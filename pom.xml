@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.searchisko</groupId>
+	<artifactId>doap-parser</artifactId>
+	<version>1.0-SNAPSHOT</version>
+
+	<packaging>jar</packaging>
+
+	<properties>
+		<sesame.version>2.7.13</sesame.version>
+		<junit.version>4.11</junit.version>
+	</properties>
+
+	<dependencies>
+		<!--<dependency>-->
+			<!--<groupId>org.openrdf.sesame</groupId>-->
+			<!--<artifactId>sesame-runtime</artifactId>-->
+			<!--<version>${sesame.version}</version>-->
+		<!--</dependency>-->
+		<dependency>
+			<groupId>com.viceversatech</groupId>
+			<artifactId>RDFBeans</artifactId>
+			<version>2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.semweb4j</groupId>
+			<!--<artifactId>rdf2go.api</artifactId>-->
+			<artifactId>rdf2go.impl.sesame</artifactId>
+			<version>4.8.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>rdfbeans-repo</id>
+			<name>RDFBeans</name>
+			<url>http://rdfbeans.sf.net/repo</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>semweb4j-repo</id>
+			<name>Semweb4j.org maven repo</name>
+			<url>http://semweb4j.org/repo/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+</project>
