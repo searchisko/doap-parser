@@ -14,12 +14,13 @@ import java.net.URI;
 
 /**
  * FOAF Person model.
+ * See <a href="http://xmlns.com/foaf/spec/">http://xmlns.com/foaf/spec/</a>.
  *
  * @author Lukas Vlcek (lvlcek@redhat.com)
  */
 
 @RDFNamespaces({
-	"foaf = http://xmlns.com/foaf/0.1/"
+		"foaf = http://xmlns.com/foaf/0.1/"
 })
 @RDFBean("foaf:Person")
 public class Person {
@@ -27,6 +28,11 @@ public class Person {
 	private String name;
 	private URI mbox;
 
+	/**
+	 * See <a href="http://xmlns.com/foaf/spec/#term_name">foaf:name</a>
+	 *
+	 * @return name value
+	 */
 	@RDF("foaf:name")
 	public String getName() {
 		return this.name;
@@ -36,6 +42,11 @@ public class Person {
 		this.name = name;
 	}
 
+	/**
+	 * See <a href="http://xmlns.com/foaf/spec/#term_mbox">foaf:mbox</a>
+	 *
+	 * @return mbox valueAdd
+	 */
 	@RDF("foaf:mbox")
 	public URI getMbox() {
 		return this.mbox;
