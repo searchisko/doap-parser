@@ -9,7 +9,6 @@ package org.searchisko.doap.json;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.map.SerializationConfig;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
-import org.searchisko.doap.model.Project;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,8 +28,8 @@ public class Converter {
 		mapper.setSerializationInclusion(JsonSerialize.Inclusion.NON_NULL);
 	}
 
-	public static String projectToJSON(Project project) throws IOException {
-		String json = mapper.writeValueAsString(project);
+	public static String objectToJSON(Object object) throws IOException {
+		String json = mapper.writeValueAsString(object);
 		log.debug("{}", json);
 		return json;
 	}

@@ -36,14 +36,29 @@ public class DOAPParser {
 
 	private static Logger log = LoggerFactory.getLogger(DOAPParser.class);
 
+	/**
+	 * Unmashall {@link Project} from given DOAP file.
+	 *
+	 * @param localPath
+	 * @return
+	 * @throws RepositoryException
+	 */
 	public static Project deserializeProjectFromRDFFile(String localPath) throws RepositoryException {
 		Collection<Project> projects = deserializeClassFromRDFFile(localPath, Project.class);
 		if (projects.size() == 1) {
 			return projects.iterator().next();
 		}
+		log.error("Multiple projects found in {}", localPath);
 		return null;
 	}
 
+	/**
+	 * Unmarshall all {@link Person} objects found in given RDF/XML file.
+	 *
+	 * @param localPath
+	 * @return
+	 * @throws RepositoryException
+	 */
 	public static Collection<Person> deserializePersonFromRDFFile(String localPath) throws RepositoryException {
 		return deserializeClassFromRDFFile(localPath, Person.class);
 	}
@@ -62,7 +77,7 @@ public class DOAPParser {
 			try {
 				con.add(file, null, RDFFormat.RDFXML);
 				ClosableIterator iter = manager.getAll(clazz);
-				if (iter.hasNext()) {
+				while (iter.hasNext()) {
 					result.add((T)iter.next());
 				}
 			} catch (RDFBeanException e) {
