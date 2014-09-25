@@ -45,7 +45,7 @@ public class Person {
 	/**
 	 * See <a href="http://xmlns.com/foaf/spec/#term_mbox">foaf:mbox</a>
 	 *
-	 * @return mbox valueAdd
+	 * @return mbox value
 	 */
 	@RDF("foaf:mbox")
 	public URI getMbox() {
