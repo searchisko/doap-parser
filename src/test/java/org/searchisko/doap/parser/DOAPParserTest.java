@@ -15,7 +15,7 @@ public class DOAPParserTest {
 	@Test
 	public void testIt() throws URISyntaxException {
 		try {
-			String path = getClass().getResource( "/doap-examples/doap_camel.rdf" ).getPath();
+			String path = getClass().getResource( "/doap-examples/doap_maven.rdf" ).getPath();
 			DOAPParser.deserializeFromFile(path);
 		} catch (RepositoryException e) {
 			e.printStackTrace();

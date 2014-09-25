@@ -9,6 +9,7 @@ import java.net.URI;
 /**
  * Created by lukas on 24/09/14.
  */
+
 @RDFNamespaces({
 	"foaf = http://xmlns.com/foaf/0.1/"
 })

@@ -11,7 +11,12 @@
 	<packaging>jar</packaging>
 
 	<properties>
-		<sesame.version>2.7.13</sesame.version>
+		<!--<sesame.version>2.7.13</sesame.version>-->
+		<rdfbeans.version>2.1</rdfbeans.version>
+		<rdf2go.version>4.8.3</rdf2go.version>
+		<jackson.version>1.9.13</jackson.version>
+		<slf4j.version>1.7.7</slf4j.version>
+		<logback.version>1.0.13</logback.version>
 		<junit.version>4.11</junit.version>
 	</properties>
 
@@ -24,19 +29,39 @@
 		<dependency>
 			<groupId>com.viceversatech</groupId>
 			<artifactId>RDFBeans</artifactId>
-			<version>2.1</version>
+			<version>${rdfbeans.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.semweb4j</groupId>
+					<artifactId>rdf2go.impl.sesame</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.semweb4j</groupId>
 			<!--<artifactId>rdf2go.api</artifactId>-->
 			<artifactId>rdf2go.impl.sesame</artifactId>
-			<version>4.8.3</version>
+			<version>${rdf2go.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
-			<version>1.9.13</version>
+			<version>${jackson.version}</version>
 		</dependency>
+
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+
+		<!-- Testing -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -68,6 +93,8 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+	<!--
+	-->
 	</repositories>
 
 </project>

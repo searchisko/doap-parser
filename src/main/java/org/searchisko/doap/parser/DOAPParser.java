@@ -8,10 +8,6 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.ontoware.aifbcommons.collection.ClosableIterator;
 import org.ontoware.rdf2go.model.Model;
 import org.openrdf.OpenRDFException;
-import org.openrdf.query.BindingSet;
-import org.openrdf.query.QueryLanguage;
-import org.openrdf.query.TupleQuery;
-import org.openrdf.query.TupleQueryResult;
 import org.openrdf.repository.Repository;
 import org.openrdf.rdf2go.RepositoryModel;
 import org.openrdf.repository.RepositoryConnection;
@@ -21,6 +17,8 @@ import org.openrdf.rio.RDFFormat;
 import org.openrdf.sail.memory.MemoryStore;
 import org.searchisko.doap.model.Person;
 import org.searchisko.doap.model.Project;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 
@@ -29,10 +27,13 @@ import java.io.File;
  */
 public class DOAPParser {
 
+	private static Logger log = LoggerFactory.getLogger(DOAPParser.class);
+
 	public static Project deserializeFromFile(String localPath) throws RepositoryException {
 		Repository rep = new SailRepository(new MemoryStore());
 		rep.initialize();
 		try {
+			log.info("DOAP file location: {}", localPath);
 			File file = new File(localPath);
 			RepositoryConnection con = rep.getConnection();
 
@@ -51,35 +52,28 @@ public class DOAPParser {
 
 				ClosableIterator iter;
 
-
-				System.out.println("Project ===========");
 				iter = manager.getAll(Project.class);
 				while (iter.hasNext()) {
 					Project p = (Project)iter.next();
-					System.out.println(mapper.writeValueAsString(p));
+					log.info("Project: {}", mapper.writeValueAsString(p));
 				}
 
-
-
-				System.out.println("Persons ===========");
 				iter = manager.getAll(Person.class);
 				while (iter.hasNext()) {
 					Person p = (Person)iter.next();
-					System.out.println(mapper.writeValueAsString(p));
+					log.info("Person: {}", mapper.writeValueAsString(p));
 				}
 
 			} catch (RDFBeanException e) {
-				System.out.println(e);
+				log.error("Error occurred: {}", e);
 			} finally {
 				model.close();
 				con.close();
 			}
 		} catch (OpenRDFException e) {
-			// handle exception
-			System.out.println(e);
+			log.error("Unexpected error: {}", e);
 		} catch (java.io.IOException e) {
-			// handle io exception
-			System.out.println(e);
+			log.error("File operation error: {}", e);
 		}
 		return null;
 	}

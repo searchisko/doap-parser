@@ -19,7 +19,8 @@ import java.util.Collection;
  * @author lvlcek@redhat.com (Lukas Vlcek)
  */
 @RDFNamespaces({
-	"doap = http://usefulinc.com/ns/doap#"
+	"doap = http://usefulinc.com/ns/doap#",
+	"foaf = http://xmlns.com/foaf/0.1/"
 })
 @RDFBean("doap:Project")
 public class Project {
@@ -31,7 +32,7 @@ public class Project {
 	private String created;
 	private String shortdesc;
 	private String description;
-	private String release;
+	private Version[] release;
 	@JsonProperty("mailing-list")
 	private URI mailing_list;
 	private String category;
@@ -44,14 +45,14 @@ public class Project {
 	@JsonProperty("download-page")
 	private URI download_page;
 	@JsonProperty("download-mirror")
-	private String download_mirror;
+	private URI download_mirror;
 	private String revision;
 	@JsonProperty("file-release")
 	private String file_release;
-	private String wiki;
+	private URI wiki;
 	@JsonProperty("bug-database")
 	private URI bug_database;
-	private String screenshots;
+	private URI screenshots;
 	private Collection<Person> maintainer;
 	private String developer;
 	private String documenter;
@@ -125,13 +126,67 @@ public class Project {
 		this.description = description;
 	}
 
-	@RDF("doap:implements")
-	public String getImplements() {
-		return this.implements_;
+//	@RDF("doap:release")
+	public Version[] getRelease() {
+		return this.release;
 	}
 
-	public void setImplements(String implements_) {
-		this.implements_ = implements_;
+	public void setRelease(Version[] release) {
+		this.release = release;
+	}
+
+	@RDF("doap:mailing-list")
+	public URI getMailing_list() {
+		return this.mailing_list;
+	}
+
+	public void setMailing_list(URI mailing_list) {
+		this.mailing_list = mailing_list;
+	}
+
+	@RDF("doap:download-page")
+	public URI getDownload_page() {
+		return this.download_page;
+	}
+
+	public void setDownload_page(URI download_page) {
+		this.download_page = download_page;
+	}
+
+	@RDF("doap:download-mirror")
+	public URI getDownload_mirror() {
+		return this.download_mirror;
+	}
+
+	public void setDownload_mirror(URI download_mirror) {
+		this.download_mirror = download_mirror;
+	}
+
+	@RDF("doap:wiki")
+	public URI getWiki() {
+		return this.wiki;
+	}
+
+	public void setWiki(URI wiki) {
+		this.wiki = wiki;
+	}
+
+	@RDF("doap:bug-database")
+	public URI getBug_database() {
+		return this.bug_database;
+	}
+
+	public void setBug_database(URI bug_database) {
+		this.bug_database = bug_database;
+	}
+
+	@RDF("doap:screenshots")
+	public URI getScreenshots() {
+		return this.screenshots;
+	}
+
+	public void setScreenshots(URI screenshots) {
+		this.screenshots = screenshots;
 	}
 
 	//@RDF("doap:maintainer")
@@ -150,5 +205,14 @@ public class Project {
 
 	public void setProgramming_language(Collection<String> programming_language) {
 		this.programming_language = programming_language;
+	}
+
+	@RDF("doap:implements")
+	public String getImplements() {
+		return this.implements_;
+	}
+
+	public void setImplements(String implements_) {
+		this.implements_ = implements_;
 	}
 }
