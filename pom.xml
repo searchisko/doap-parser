@@ -18,6 +18,8 @@
 		<slf4j.version>1.7.7</slf4j.version>
 		<logback.version>1.0.13</logback.version>
 		<junit.version>4.11</junit.version>
+		<jsonassert.version>1.2.3</jsonassert.version>
+		<commonio.version>2.4</commonio.version>
 	</properties>
 
 	<dependencies>
@@ -66,6 +68,19 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- Allows better "non-strict" comparison of JSON objects. -->
+		<dependency>
+			<groupId>org.skyscreamer</groupId>
+			<artifactId>jsonassert</artifactId>
+			<version>${jsonassert.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commonio.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
