@@ -45,10 +45,13 @@ public class DOAPParser {
 	 */
 	public static Project deserializeProjectFromRDFFile(String localPath) throws RepositoryException {
 		Collection<Project> projects = deserializeClassFromRDFFile(localPath, Project.class);
-		if (projects.size() == 1) {
+		if (projects.size() == 0) {
+			log.error("No project found in {}", localPath);
+		} else if (projects.size() == 1) {
 			return projects.iterator().next();
+		} else {
+			log.error("Multiple projects found in {}", localPath);
 		}
-		log.error("Multiple projects found in {}", localPath);
 		return null;
 	}
 
