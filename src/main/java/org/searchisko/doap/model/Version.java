@@ -1,12 +1,20 @@
-package org.searchisko.doap.model;
-
-/**
- * Created by lukas on 24/09/14.
+/*
+ * JBoss, Home of Professional Open Source
+ * Copyright 2014 Red Hat Inc. and/or its affiliates and other contributors
+ * as indicated by the @authors tag. All rights reserved.
  */
+
+package org.searchisko.doap.model;
 
 import com.viceversatech.rdfbeans.annotations.RDF;
 import com.viceversatech.rdfbeans.annotations.RDFBean;
 import com.viceversatech.rdfbeans.annotations.RDFNamespaces;
+
+/**
+ * DOAP Version model.
+ *
+ * @author Lukas Vlcek (lvlcek@redhat.com)
+ */
 
 @RDFNamespaces({
 	"release = http://usefulinc.com/ns/doap#/release"

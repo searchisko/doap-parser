@@ -1,3 +1,9 @@
+/*
+ * JBoss, Home of Professional Open Source
+ * Copyright 2014 Red Hat Inc. and/or its affiliates and other contributors
+ * as indicated by the @authors tag. All rights reserved.
+ */
+
 package org.searchisko.doap.model;
 
 import com.viceversatech.rdfbeans.annotations.RDF;
@@ -9,7 +15,7 @@ import java.net.URI;
 import java.util.Collection;
 
 /**
- * Project model based on DOAP specification: http://usefulinc.com/ns/doap
+ * Project DOAP model based on specification: http://usefulinc.com/ns/doap
  *
  * We had to change characters in field names that contained dash to underscore.
  * For example: 'mailing-list' -> 'mailing_list'. We also changed field name 'implements' (which is Java lang

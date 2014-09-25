@@ -1,3 +1,9 @@
+/*
+ * JBoss, Home of Professional Open Source
+ * Copyright 2014 Red Hat Inc. and/or its affiliates and other contributors
+ * as indicated by the @authors tag. All rights reserved.
+ */
+
 package org.searchisko.doap.parser;
 
 import org.junit.Test;
@@ -13,7 +19,7 @@ import java.net.URISyntaxException;
 import static org.junit.Assert.fail;
 
 /**
- * Created by lukas on 22/09/14.
+ * @author Lukas Vlcek (lvlcek@redhat.com)
  */
 public class DOAPParserTest {
 

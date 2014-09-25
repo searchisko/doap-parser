@@ -1,3 +1,9 @@
+/*
+ * JBoss, Home of Professional Open Source
+ * Copyright 2014 Red Hat Inc. and/or its affiliates and other contributors
+ * as indicated by the @authors tag. All rights reserved.
+ */
+
 package org.searchisko.doap.model;
 
 import com.viceversatech.rdfbeans.annotations.RDF;
@@ -7,7 +13,9 @@ import com.viceversatech.rdfbeans.annotations.RDFNamespaces;
 import java.net.URI;
 
 /**
- * Created by lukas on 24/09/14.
+ * FOAF Person model.
+ *
+ * @author Lukas Vlcek (lvlcek@redhat.com)
  */
 
 @RDFNamespaces({

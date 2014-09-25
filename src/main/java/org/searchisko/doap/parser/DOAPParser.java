@@ -1,3 +1,8 @@
+/*
+ * JBoss, Home of Professional Open Source
+ * Copyright 2014 Red Hat Inc. and/or its affiliates and other contributors
+ * as indicated by the @authors tag. All rights reserved.
+ */
 package org.searchisko.doap.parser;
 
 import com.viceversatech.rdfbeans.RDFBeanManager;
@@ -23,7 +28,9 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * Created by lukas on 22/09/14.
+ * DOAP file parser.
+ *
+ * @author Lukas Vlcek (lvlcek@redhat.com)
  */
 public class DOAPParser {
 
