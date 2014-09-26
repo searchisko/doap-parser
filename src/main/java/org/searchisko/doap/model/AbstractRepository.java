@@ -9,6 +9,7 @@ public abstract class AbstractRepository implements Repository {
 
 	private URI location;
 	private URI browse;
+	private String anon_root;
 
 	public URI getLocation() {
 		return this.location;
@@ -26,4 +27,9 @@ public abstract class AbstractRepository implements Repository {
 		this.browse = browse;
 	}
 
+	public String getAnon_root() { return this.anon_root; }
+
+	public void setAnon_root(String anon_root) {
+		this.anon_root = anon_root;
+	}
 }

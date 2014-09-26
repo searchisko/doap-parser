@@ -44,7 +44,6 @@ public class Project {
 	private Collection<URI> category;
 	private URI license;
 	private Collection<Repository> repository;
-	private String anon_root;
 	private String module;
 	@JsonProperty("download-page")
 	private URI download_page;
