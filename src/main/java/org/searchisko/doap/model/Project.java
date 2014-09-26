@@ -64,7 +64,7 @@ public class Project {
 	private String language;
 	private String platform;
 	private String audience;
-	private String blog;
+	private URI blog;
 
 	@RDF("doap:name")
 	public String getName() {
@@ -298,5 +298,23 @@ public class Project {
 
 	public void setPlatform(String platform) {
 		this.platform = platform;
+	}
+
+	@RDF("doap:audience")
+	public String getAudience() {
+		return this.audience;
+	}
+
+	public void setAudience(String audience) {
+		this.audience = audience;
+	}
+
+	@RDF("doap:blog")
+	public URI getBlog() {
+		return this.blog;
+	}
+
+	public void setBlog(URI blog) {
+		this.blog = blog;
 	}
 }
