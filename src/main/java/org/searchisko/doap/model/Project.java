@@ -62,7 +62,6 @@ public class Project {
 	@JsonProperty("service-endpoint")
 	private URI service_endpoint;
 	private String language;
-	private String vendor;
 	private String platform;
 	private String audience;
 	private String blog;
