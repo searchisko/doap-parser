@@ -52,9 +52,6 @@ public class Project {
 	private URI download_page;
 	@JsonProperty("download-mirror")
 	private URI download_mirror;
-	private String revision;
-	@JsonProperty("file-release")
-	private String file_release;
 	private URI wiki;
 	@JsonProperty("bug-database")
 	private URI bug_database;
