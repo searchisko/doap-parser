@@ -14,7 +14,9 @@ import java.net.URI;
 
 /**
  * FOAF Person model.
+ *
  * See <a href="http://xmlns.com/foaf/spec/">http://xmlns.com/foaf/spec/</a>.
+ * See <a href="http://www.xml.com/pub/a/2004/02/04/foaf.html">http://www.xml.com/pub/a/2004/02/04/foaf.html</a>.
  *
  * @author Lukas Vlcek (lvlcek@redhat.com)
  */
