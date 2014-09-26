@@ -53,11 +53,11 @@ public class Project {
 	private URI bug_database;
 	private URI screenshots;
 	private Collection<Person> maintainer;
-	private String developer;
-	private String documenter;
-	private String translator;
-	private String tester;
-	private String helper;
+	private Collection<Person> developer;
+	private Collection<Person> documenter;
+	private Collection<Person> translator;
+	private Collection<Person> tester;
+	private Collection<Person> helper;
 	@JsonProperty("programming-language")
 	private Collection<String> programming_language;
 	private String os;
@@ -222,6 +222,51 @@ public class Project {
 
 	public void setMaintainer(Collection<Person> maintainer) {
 		this.maintainer = maintainer;
+	}
+
+	//@RDF("doap:developer")
+	public Collection<Person> getDeveloper() {
+		return this.developer;
+	}
+
+	public void setDeveloper(Collection<Person> developer) {
+		this.developer = developer;
+	}
+
+	//@RDF("doap:documenter")
+	public Collection<Person> getDocumenter() {
+		return this.documenter;
+	}
+
+	public void setDocumenter(Collection<Person> documenter) {
+		this.documenter = documenter;
+	}
+
+	//@RDF("doap:translator")
+	public Collection<Person> getTranslator() {
+		return this.translator;
+	}
+
+	public void setTranslator(Collection<Person> translator) {
+		this.translator = translator;
+	}
+
+	//@RDF("doap:tester")
+	public Collection<Person> getTester() {
+		return this.tester;
+	}
+
+	public void setTester(Collection<Person> tester) {
+		this.tester = tester;
+	}
+
+	//@RDF("doap:helper")
+	public Collection<Person> getHelper() {
+		return this.helper;
+	}
+
+	public void setHelper(Collection<Person> helper) {
+		this.helper = helper;
 	}
 
 	@RDF("doap:programming-language")
