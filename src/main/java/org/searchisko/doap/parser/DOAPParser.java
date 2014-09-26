@@ -19,6 +19,7 @@ import org.openrdf.rio.RDFFormat;
 import org.openrdf.sail.memory.MemoryStore;
 import org.searchisko.doap.model.Person;
 import org.searchisko.doap.model.Project;
+import org.searchisko.doap.model.Version;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -64,6 +65,17 @@ public class DOAPParser {
 	 */
 	public static Collection<Person> deserializePersonFromRDFFile(String localPath) throws RepositoryException {
 		return deserializeClassFromRDFFile(localPath, Person.class);
+	}
+
+	/**
+	 * Unmarshall all {@link Version} objects found in given RDF/XML file.
+	 *
+	 * @param localPath
+	 * @return
+	 * @throws RepositoryException
+	 */
+	public static Collection<Version> deserializeVersionFromRDFFile(String localPath) throws RepositoryException {
+		return deserializeClassFromRDFFile(localPath, Version.class);
 	}
 
 	private static <T> Collection<T> deserializeClassFromRDFFile(String localPath, Class<T> clazz) throws RepositoryException {

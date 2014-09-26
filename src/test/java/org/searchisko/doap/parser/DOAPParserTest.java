@@ -11,6 +11,7 @@ import org.junit.Test;
 import org.searchisko.doap.json.Converter;
 import org.searchisko.doap.model.Person;
 import org.searchisko.doap.model.Project;
+import org.searchisko.doap.model.Version;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
@@ -44,10 +45,10 @@ public class DOAPParserTest {
 	 */
 	@Test
 	public void testProjectParsing() throws Exception {
-		String path = getClass().getResource( "/doap-examples/doap_maven.rdf" ).getPath();
+		String path = getClass().getResource( "/doap-examples/doap_camel.rdf" ).getPath();
 		Project project = DOAPParser.deserializeProjectFromRDFFile(path);
 		String json = Converter.objectToJSON(project);
-		JSONAssert.assertEquals(readStringFromClasspathFile("/doap-json/maven.json"), json, JSONCompareMode.NON_EXTENSIBLE);
+		JSONAssert.assertEquals(readStringFromClasspathFile("/doap-json/camel.json"), json, JSONCompareMode.NON_EXTENSIBLE);
 	}
 
 	/**
@@ -58,10 +59,21 @@ public class DOAPParserTest {
 	public void testPersonParsing() throws Exception {
 		String path = getClass().getResource( "/doap-examples/doap_maven.rdf" ).getPath();
 		Collection<Person> persons = DOAPParser.deserializePersonFromRDFFile(path);
-		assertEquals(14, persons.size());
 		// try to convert each person
 		for (Person p : persons) {
 			String json = Converter.objectToJSON(p);
 		}
+		assertEquals(14, persons.size());
+	}
+
+	@Test
+	public void testVersionParsing() throws Exception {
+		String path = getClass().getResource( "/doap-examples/doap_maven.rdf" ).getPath();
+		Collection<Version> versions = DOAPParser.deserializeVersionFromRDFFile(path);
+		// try to convert each version
+		for (Version p : versions) {
+			String json = Converter.objectToJSON(p);
+		}
+		assertEquals(15, versions.size());
 	}
 }

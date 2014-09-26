@@ -132,7 +132,7 @@ public class Project {
 		this.description = description;
 	}
 
-//	@RDF("doap:release")
+	// @RDF("doap:release")
 	public Version[] getRelease() {
 		return this.release;
 	}
@@ -195,7 +195,7 @@ public class Project {
 		this.screenshots = screenshots;
 	}
 
-	//@RDF("doap:maintainer")
+	// @RDF("doap:maintainer")
 	public Collection<Person> getMaintainer() {
 		return this.maintainer;
 	}
