@@ -1,3 +1,8 @@
+/*
+ * JBoss, Home of Professional Open Source
+ * Copyright 2014 Red Hat Inc. and/or its affiliates and other contributors
+ * as indicated by the @authors tag. All rights reserved.
+ */
 package org.searchisko.doap.model;
 
 import com.viceversatech.rdfbeans.annotations.RDF;
@@ -8,7 +13,7 @@ import org.codehaus.jackson.annotate.JsonProperty;
 import java.net.URI;
 
 /**
- * Created by lukas on 26/09/14.
+ * @author Lukas Vlcek (lvlcek@redhat.com)
  */
 @RDFNamespaces(
 		"doap = http://usefulinc.com/ns/doap#"
