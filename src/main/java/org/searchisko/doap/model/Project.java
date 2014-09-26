@@ -43,7 +43,7 @@ public class Project {
 	private URI mailing_list;
 	private Collection<URI> category;
 	private URI license;
-	private String repository;
+	private Collection<Repository> repository;
 	private String anon_root;
 	private String browse;
 	private String module;
@@ -166,6 +166,15 @@ public class Project {
 
 	public void setLicense(URI license) {
 		this.license = license;
+	}
+
+	//@RDF("doap:repository")
+	public Collection<Repository> getRepository() {
+		return this.repository;
+	}
+
+	public void setRepository(Collection<Repository> repository) {
+		this.repository = repository;
 	}
 
 	@RDF("doap:download-page")
