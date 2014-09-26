@@ -30,6 +30,7 @@ public class Version {
 	private String revision;
 	@JsonProperty("file-release")
 	private Collection<String> file_release;
+	private String platform;
 
 	@RDF("doap:name")
 	public String getName() {
@@ -65,5 +66,14 @@ public class Version {
 
 	public void setFile_release(Collection<String> file_release) {
 		this.file_release = file_release;
+	}
+
+	@RDF("doap:platform")
+	public String getPlatform() {
+		return this.platform;
+	}
+
+	public void setPlatform(String platform) {
+		this.platform = platform;
 	}
 }

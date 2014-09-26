@@ -290,4 +290,13 @@ public class Project {
 	public void setLanguage(String language) {
 		this.language = language;
 	}
+
+	@RDF("doap:platform")
+	public String getPlatform() {
+		return this.platform;
+	}
+
+	public void setPlatform(String platform) {
+		this.platform = platform;
+	}
 }
