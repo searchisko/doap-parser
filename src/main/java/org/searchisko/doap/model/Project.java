@@ -60,7 +60,7 @@ public class Project {
 	@JsonProperty("programming-language")
 	private Collection<String> programming_language;
 	@JsonProperty("service-endpoint")
-	private String service_endpoint;
+	private URI service_endpoint;
 	private String language;
 	private String vendor;
 	private String platform;
@@ -272,5 +272,23 @@ public class Project {
 
 	public void setProgramming_language(Collection<String> programming_language) {
 		this.programming_language = programming_language;
+	}
+
+	@RDF("doap:service-endpoint")
+	public URI getService_endpoint() {
+		return this.service_endpoint;
+	}
+
+	public void setService_endpoint(URI service_endpoint) {
+		this.service_endpoint = service_endpoint;
+	}
+
+	@RDF("doap:language")
+	public String getLanguage() {
+		return this.language;
+	}
+
+	public void setLanguage(String language) {
+		this.language = language;
 	}
 }
