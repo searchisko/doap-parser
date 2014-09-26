@@ -40,7 +40,7 @@ public class DOAPParserTest {
 	}
 
 	/**
-	 * Test parsing of project
+	 * Test parsing of project.
 	 * @throws Exception
 	 */
 	@Test
@@ -52,7 +52,7 @@ public class DOAPParserTest {
 	}
 
 	/**
-	 * Test parsing of person objects fro project
+	 * Test parsing of person objects from project.
 	 * @throws Exception
 	 */
 	@Test
@@ -66,6 +66,10 @@ public class DOAPParserTest {
 		assertEquals(14, persons.size());
 	}
 
+	/**
+	 * Test parsing of version objects from project.
+	 * @throws Exception
+	 */
 	@Test
 	public void testVersionParsing() throws Exception {
 		String path = getClass().getResource( "/doap-examples/doap_maven.rdf" ).getPath();

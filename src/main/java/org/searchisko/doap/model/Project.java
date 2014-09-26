@@ -42,7 +42,7 @@ public class Project {
 	@JsonProperty("mailing-list")
 	private URI mailing_list;
 	private String category;
-	private String license;
+	private URI license;
 	private String repository;
 	private String anon_root;
 	private String browse;
@@ -148,6 +148,15 @@ public class Project {
 
 	public void setMailing_list(URI mailing_list) {
 		this.mailing_list = mailing_list;
+	}
+
+	@RDF("doap:license")
+	public URI getLicense() {
+		return this.license;
+	}
+
+	public void setLicense(URI license) {
+		this.license = license;
 	}
 
 	@RDF("doap:download-page")
