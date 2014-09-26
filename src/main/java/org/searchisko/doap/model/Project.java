@@ -18,9 +18,8 @@ import java.util.Collection;
  * Project DOAP model based on specification: http://usefulinc.com/ns/doap
  *
  * We had to change characters in field names that contained dash to underscore.
- * For example: 'mailing-list' -> 'mailing_list'. We also changed field name 'implements' (which is Java lang
- * reserved word) to 'implements_'. For JSON serialization we added rules to override field names back to
- * names declared in the DOAP specification.
+ * For example: 'mailing-list' -> 'mailing_list'. For JSON serialization we added
+ * rules to override field names back to names declared in the DOAP specification.
  *
  * @author lvlcek@redhat.com (Lukas Vlcek)
  */
@@ -60,9 +59,6 @@ public class Project {
 	private Collection<Person> helper;
 	@JsonProperty("programming-language")
 	private Collection<String> programming_language;
-	private String os;
-	@JsonProperty("implements")
-	private String implements_;
 	@JsonProperty("service-endpoint")
 	private String service_endpoint;
 	private String language;
@@ -276,14 +272,5 @@ public class Project {
 
 	public void setProgramming_language(Collection<String> programming_language) {
 		this.programming_language = programming_language;
-	}
-
-	@RDF("doap:implements")
-	public String getImplements() {
-		return this.implements_;
-	}
-
-	public void setImplements(String implements_) {
-		this.implements_ = implements_;
 	}
 }
