@@ -10,6 +10,8 @@ import com.viceversatech.rdfbeans.annotations.RDF;
 import com.viceversatech.rdfbeans.annotations.RDFBean;
 import com.viceversatech.rdfbeans.annotations.RDFNamespaces;
 import org.codehaus.jackson.annotate.JsonProperty;
+import org.searchisko.doap.model.person.Person;
+import org.searchisko.doap.model.repository.Repository;
 
 import java.net.URI;
 import java.util.Collection;
@@ -37,7 +39,7 @@ public class Project {
 	private String created;
 	private String shortdesc;
 	private String description;
-	private Version[] release;
+	private Collection<Version> release;
 	@JsonProperty("mailing-list")
 	private URI mailing_list;
 	private Collection<URI> category;
@@ -121,11 +123,11 @@ public class Project {
 	}
 
 	// @RDF("doap:release")
-	public Version[] getRelease() {
+	public Collection<Version> getRelease() {
 		return this.release;
 	}
 
-	public void setRelease(Version[] release) {
+	public void setRelease(Collection<Version> release) {
 		this.release = release;
 	}
 
@@ -210,7 +212,7 @@ public class Project {
 		this.screenshots = screenshots;
 	}
 
-	// @RDF("doap:maintainer")
+//	@RDF("doap:maintainer")
 	public Collection<Person> getMaintainer() {
 		return this.maintainer;
 	}

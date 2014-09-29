@@ -3,13 +3,13 @@
  * Copyright 2014 Red Hat Inc. and/or its affiliates and other contributors
  * as indicated by the @authors tag. All rights reserved.
  */
-package org.searchisko.doap.model;
+package org.searchisko.doap.model.repository;
 
 import com.viceversatech.rdfbeans.annotations.RDFBean;
 
 /**
  * @author Lukas Vlcek (lvlcek@redhat.com)
  */
-@RDFBean("doap:CVSRepository")
-public class CVSRepository extends AbstractRepository implements Repository {
+@RDFBean("doap:SVNRepository")
+public class SVNRepository extends AbstractRepository implements Repository {
 }

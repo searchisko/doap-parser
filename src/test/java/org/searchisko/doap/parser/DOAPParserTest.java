@@ -13,12 +13,13 @@ import org.junit.Before;
 import org.openrdf.repository.RepositoryException;
 import org.searchisko.doap.json.Converter;
 import org.searchisko.doap.model.*;
+import org.searchisko.doap.model.person.Person;
+import org.searchisko.doap.model.repository.Repository;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
 import java.io.IOException;
 import java.io.StringWriter;
-import java.util.ArrayList;
 import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
@@ -58,11 +59,23 @@ public class DOAPParserTest {
 	 * @throws Exception
 	 */
 	@Test
-	public void testProjectParsing() throws Exception {
+	public void testCamelProjectParsing() throws Exception {
 		parser.loadLocalFile(getClass().getResource("/doap-asf-examples/doap_camel.rdf").getPath());
 		Project project = parser.getProject();
 		String json = Converter.objectToJSON(project);
 		JSONAssert.assertEquals(readStringFromClasspathFile("/doap-json/camel.json"), json, JSONCompareMode.NON_EXTENSIBLE);
+	}
+
+	/**
+	 * Test parsing of project.
+	 * @throws Exception
+	 */
+	@Test
+	public void testMavenProjectParsing() throws Exception {
+		parser.loadLocalFile(getClass().getResource("/doap-asf-examples/doap_maven.rdf").getPath());
+		Project project = parser.getProject();
+		String json = Converter.objectToJSON(project);
+		JSONAssert.assertEquals(readStringFromClasspathFile("/doap-json/maven.json"), json, JSONCompareMode.NON_EXTENSIBLE);
 	}
 
 	/**
@@ -73,9 +86,8 @@ public class DOAPParserTest {
 	public void testPersonParsing() throws Exception {
 		parser.loadLocalFile(getClass().getResource("/doap-asf-examples/doap_maven.rdf").getPath());
 		Collection<Person> persons = parser.getPersons();
-		// try to convert each person
 		for (Person p : persons) {
-			String json = Converter.objectToJSON(p);
+			Converter.objectToJSON(p);
 		}
 		assertEquals(14, persons.size());
 	}
@@ -88,9 +100,8 @@ public class DOAPParserTest {
 	public void testVersionParsing() throws Exception {
 		parser.loadLocalFile(getClass().getResource("/doap-asf-examples/doap_maven.rdf").getPath());
 		Collection<Version> versions = parser.getVersions();
-		// try to convert each version
 		for (Version p : versions) {
-			String json = Converter.objectToJSON(p);
+			Converter.objectToJSON(p);
 		}
 		assertEquals(15, versions.size());
 	}
@@ -104,7 +115,7 @@ public class DOAPParserTest {
 		parser.loadLocalFile(getClass().getResource("/doap-asf-examples/doap_perl.rdf").getPath());
 		Collection<? extends Repository> repositories = parser.getSVNRepository();
 		for (Repository r : repositories) {
-			String json = Converter.objectToJSON(r);
+			Converter.objectToJSON(r);
 		}
 		assertEquals(4, repositories.size());
 	}
@@ -112,16 +123,20 @@ public class DOAPParserTest {
 	@Test
 	public void testAllRepositoryTypesParsing() throws Exception {
 		parser.loadLocalFile(getClass().getResource("/doap-artificial-examples/doap_multi_repositories.rdf").getPath());
-		Collection<Repository> repositories = new ArrayList<Repository>();
-		repositories.addAll(parser.getArchRepository());
-		repositories.addAll(parser.getBazaarBranch());
-		repositories.addAll(parser.getBKRepository());
-		repositories.addAll(parser.getCVSRepository());
-		repositories.addAll(parser.getDarcsRepository());
-		repositories.addAll(parser.getGitRepository());
-		repositories.addAll(parser.getHgRepository());
-		repositories.addAll(parser.getSVNRepository());
-		String json = Converter.objectToJSON(repositories);
+		Collection<Repository> repositories = (Collection<Repository>) parser.getAllRepositories();
+		Converter.objectToJSON(repositories);
 		assertEquals(8, repositories.size());
+	}
+
+	/**
+	 * Test parsing maintainers.
+	 * @throws Exception
+	 */
+	@Test
+	public void testMaintainerParsing() throws Exception {
+		parser.loadLocalFile(getClass().getResource("/doap-asf-examples/doap_maven.rdf").getPath());
+		Collection<Person> maintainers  = parser.getMaintainers();
+		Converter.objectToJSON(maintainers);
+		assertEquals(14, maintainers.size());
 	}
 }

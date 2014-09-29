@@ -4,7 +4,7 @@
  * as indicated by the @authors tag. All rights reserved.
  */
 
-package org.searchisko.doap.model;
+package org.searchisko.doap.model.person;
 
 import com.viceversatech.rdfbeans.annotations.RDF;
 import com.viceversatech.rdfbeans.annotations.RDFBean;
@@ -22,7 +22,7 @@ import java.net.URI;
  */
 
 @RDFNamespaces({
-		"foaf = http://xmlns.com/foaf/0.1/"
+	"foaf = http://xmlns.com/foaf/0.1/"
 })
 @RDFBean("foaf:Person")
 public class Person {
