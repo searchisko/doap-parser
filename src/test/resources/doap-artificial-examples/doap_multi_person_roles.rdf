@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/p2.xsl"?>
+<rdf:RDF xml:lang="en" xmlns="http://usefulinc.com/ns/doap#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:asfext="http://projects.apache.org/ns/asfext#" xmlns:foaf="http://xmlns.com/foaf/0.1/">
+	<Project rdf:about="http://perl.apache.org/">
+
+		<maintainer>
+			<foaf:Person>
+				<foaf:name>John The Maintainer</foaf:name>
+				<foaf:mbox rdf:resource="mailto:john.maintainer@apache.org"/>
+			</foaf:Person>
+		</maintainer>
+
+		<developer>
+			<foaf:Person>
+				<foaf:name>John The Developer</foaf:name>
+				<foaf:mbox rdf:resource="mailto:john.developer@apache.org"/>
+			</foaf:Person>
+		</developer>
+
+		<documenter>
+			<foaf:Person>
+				<foaf:name>John The Documenter</foaf:name>
+				<foaf:mbox rdf:resource="mailto:john.documenter@apache.org"/>
+			</foaf:Person>
+		</documenter>
+
+		<translator>
+			<foaf:Person>
+				<foaf:name>John The Translator</foaf:name>
+				<foaf:mbox rdf:resource="mailto:john.translator@apache.org"/>
+			</foaf:Person>
+		</translator>
+
+		<tester>
+			<foaf:Person>
+				<foaf:name>John The Tester</foaf:name>
+				<foaf:mbox rdf:resource="mailto:john.tester@apache.org"/>
+			</foaf:Person>
+		</tester>
+
+		<helper>
+			<foaf:Person>
+				<foaf:name>John The Helper</foaf:name>
+				<foaf:mbox rdf:resource="mailto:john.helper@apache.org"/>
+			</foaf:Person>
+		</helper>
+
+	</Project>
+
+</rdf:RDF>

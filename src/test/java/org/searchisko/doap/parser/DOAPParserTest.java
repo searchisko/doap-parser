@@ -128,6 +128,42 @@ public class DOAPParserTest {
 		assertEquals(8, repositories.size());
 	}
 
+	@Test
+	public void testAllPersonRolesParsing() throws Exception {
+		parser.loadLocalFile(getClass().getResource("/doap-artificial-examples/doap_multi_person_roles.rdf").getPath());
+		Collection<Person> persons;
+		{
+			persons = parser.getDevelopers();
+			assertEquals(1, persons.size());
+			assertEquals("John The Developer", persons.iterator().next().getName());
+		}
+		{
+			persons = parser.getMaintainers();
+			assertEquals(1, persons.size());
+			assertEquals("John The Maintainer", persons.iterator().next().getName());
+		}
+		{
+			persons = parser.getTester();
+			assertEquals(1, persons.size());
+			assertEquals("John The Tester", persons.iterator().next().getName());
+		}
+		{
+			persons = parser.getHelper();
+			assertEquals(1, persons.size());
+			assertEquals("John The Helper", persons.iterator().next().getName());
+		}
+		{
+			persons = parser.getTranslators();
+			assertEquals(1, persons.size());
+			assertEquals("John The Translator", persons.iterator().next().getName());
+		}
+		{
+			persons = parser.getDocumenters();
+			assertEquals(1, persons.size());
+			assertEquals("John The Documenter", persons.iterator().next().getName());
+		}
+	}
+
 	/**
 	 * Test parsing maintainers.
 	 * @throws Exception

@@ -12,9 +12,9 @@
 
 	<!--<logger name="ch.qos.logback" level="error"/>-->
 	<logger name="org.searchisko" level="debug"/>
-	<logger name="org.openrdf" level="trace"/>
+	<logger name="org.openrdf" level="warn"/>
 	<!--<logger name="org.semweb4j" level="trace"/>-->
-	<logger name="com.viceversatech" level="trace"/>
+	<logger name="com.viceversatech" level="warn"/>
 
     <root level="ERROR">
         <appender-ref ref="STDOUT"/>
