@@ -38,8 +38,8 @@ import java.util.List;
 /**
  * DOAP file parser. It can parse DOAP RDF/XML files into {@link org.searchisko.doap.model.Project}.
  *
- * It is designed to parse only a single file ATM. Client MUST call {@link #setUp()} method before
- * first use and SHOULD call {@link #tearDown()} after the work to release allocated resources.
+ * It is designed to parse only a single file ATM. Client MUST call {@link #repositoryInit()} method before
+ * first use and SHOULD call {@link #repositoryClose()} after the work to release allocated resources.
  *
  * @author Lukas Vlcek (lvlcek@redhat.com)
  */
@@ -58,14 +58,18 @@ public class DOAPParser {
 	 *
 	 * @throws RepositoryException
 	 */
-	public void setUp() throws RepositoryException {
-		rep = new SailRepository(new MemoryStore());
-		rep.initialize();
-		conn = rep.getConnection();
-		model = new RepositoryModel(rep);
-		model.open();
-		manager = new RDFBeanManager(model);
-		repositorySetup = true;
+	public void repositoryInit() throws RepositoryException {
+		if (!repositorySetup) {
+			rep = new SailRepository(new MemoryStore());
+			rep.initialize();
+			conn = rep.getConnection();
+			model = new RepositoryModel(rep);
+			model.open();
+			manager = new RDFBeanManager(model);
+			repositorySetup = true;
+		} else {
+			log.info("Trying to setup the repository but it has been already setup.");
+		}
 	}
 
 	/**
@@ -73,7 +77,7 @@ public class DOAPParser {
 	 *
 	 * @throws RepositoryException
 	 */
-	public void tearDown() throws RepositoryException {
+	public void repositoryClose() throws RepositoryException {
 		if (repositorySetup) {
 			model.close();
 			conn.close();
@@ -83,7 +87,7 @@ public class DOAPParser {
 
 	private void checkRepository() throws RepositoryException {
 		if (!repositorySetup) {
-			throw new RepositoryException("Repository not ready. Did you forget to call setUp() method?");
+			throw new RepositoryException("Repository not ready. Did you forget to call repositoryInit() method?");
 		}
 	}
 

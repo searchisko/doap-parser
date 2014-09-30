@@ -33,12 +33,12 @@ public class DOAPParserTest {
 
 	@Before
 	public void setUp() throws RepositoryException {
-		parser.setUp();
+		parser.repositoryInit();
 	}
 
 	@After
 	public void tearDown() throws RepositoryException {
-		parser.tearDown();
+		parser.repositoryClose();
 	}
 
 	/**
