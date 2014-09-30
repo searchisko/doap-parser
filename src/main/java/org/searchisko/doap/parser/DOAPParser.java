@@ -28,6 +28,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -35,7 +36,10 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * DOAP file parser.
+ * DOAP file parser. It can parse DOAP RDF/XML files into {@link org.searchisko.doap.model.Project}.
+ *
+ * It is designed to parse only a single file ATM. Client MUST call {@link #setUp()} method before
+ * first use and SHOULD call {@link #tearDown()} after the work to release allocated resources.
  *
  * @author Lukas Vlcek (lvlcek@redhat.com)
  */
@@ -47,7 +51,13 @@ public class DOAPParser {
 	private RepositoryConnection conn;
 	private Model model;
 	private RDFBeanManager manager;
+	private boolean repositorySetup = false;
 
+	/**
+	 * Prepare in-memory RDF document repository.
+	 *
+	 * @throws RepositoryException
+	 */
 	public void setUp() throws RepositoryException {
 		rep = new SailRepository(new MemoryStore());
 		rep.initialize();
@@ -55,15 +65,38 @@ public class DOAPParser {
 		model = new RepositoryModel(rep);
 		model.open();
 		manager = new RDFBeanManager(model);
+		repositorySetup = true;
 	}
 
+	/**
+	 * Release all resources and close the repository.
+	 *
+	 * @throws RepositoryException
+	 */
 	public void tearDown() throws RepositoryException {
-		model.close();
-		conn.close();
-		rep.shutDown();
+		if (repositorySetup) {
+			model.close();
+			conn.close();
+			rep.shutDown();
+		}
 	}
 
+	private void checkRepository() throws RepositoryException {
+		if (!repositorySetup) {
+			throw new RepositoryException("Repository not ready. Did you forget to call setUp() method?");
+		}
+	}
+
+	/**
+	 * Add RDF document from local file.
+	 *
+	 * @param localPath
+	 * @throws RepositoryException
+	 * @throws RDFParseException
+	 * @throws IOException
+	 */
 	public void loadLocalFile(String localPath) throws RepositoryException, RDFParseException, IOException {
+		checkRepository();
 		log.info("Adding file [{}] to RDF repository.", localPath);
 		File file = new File(localPath);
 		if (file.exists() && file.canRead()) {
@@ -73,7 +106,21 @@ public class DOAPParser {
 		}
 	}
 
-	public <T> Collection<T> deserializeFromRepository(Class<T> clazz) throws RDFBeanException {
+	/**
+	 * Add RDF document from {@link java.io.InputStream}. This method does not close the InputStream.
+	 *
+	 * @param inputStream
+	 * @throws RepositoryException
+	 * @throws RDFParseException
+	 * @throws IOException
+	 */
+	public void loadInputStream(InputStream inputStream) throws RepositoryException, RDFParseException, IOException {
+		checkRepository();
+		conn.add(inputStream, null, RDFFormat.RDFXML);
+	}
+
+	private <T> Collection<T> deserializeFromRepository(Class<T> clazz) throws RDFBeanException, RepositoryException {
+		checkRepository();
 		List<T> result = new ArrayList<T>();
 		ClosableIterator iter = manager.getAll(clazz);
 		while (iter.hasNext()) {
@@ -276,7 +323,7 @@ public class DOAPParser {
 	 * @return
 	 * @throws RDFBeanException
 	 */
-	public Collection<Person> getMaintainers() throws RDFBeanException {
+	public Collection<Person> getMaintainers() throws RDFBeanException, RepositoryException {
 		return getPeopleInRole(PeopleInRole.MAINTAIER);
 	}
 
@@ -285,7 +332,7 @@ public class DOAPParser {
 	 * @return
 	 * @throws RDFBeanException
 	 */
-	public Collection<Person> getDevelopers() throws RDFBeanException {
+	public Collection<Person> getDevelopers() throws RDFBeanException, RepositoryException {
 		return getPeopleInRole(PeopleInRole.DEVELOPER);
 	}
 
@@ -294,7 +341,7 @@ public class DOAPParser {
 	 * @return
 	 * @throws RDFBeanException
 	 */
-	public Collection<Person> getDocumenters() throws RDFBeanException {
+	public Collection<Person> getDocumenters() throws RDFBeanException, RepositoryException {
 		return getPeopleInRole(PeopleInRole.DOCUMENTER);
 	}
 
@@ -303,7 +350,7 @@ public class DOAPParser {
 	 * @return
 	 * @throws RDFBeanException
 	 */
-	public Collection<Person> getTranslators() throws RDFBeanException {
+	public Collection<Person> getTranslators() throws RDFBeanException, RepositoryException {
 		return getPeopleInRole(PeopleInRole.TRANSLATOR);
 	}
 
@@ -312,7 +359,7 @@ public class DOAPParser {
 	 * @return
 	 * @throws RDFBeanException
 	 */
-	public Collection<Person> getTester() throws RDFBeanException {
+	public Collection<Person> getTester() throws RDFBeanException, RepositoryException {
 		return getPeopleInRole(PeopleInRole.TESTER);
 	}
 
@@ -321,11 +368,12 @@ public class DOAPParser {
 	 * @return
 	 * @throws RDFBeanException
 	 */
-	public Collection<Person> getHelper() throws RDFBeanException {
+	public Collection<Person> getHelper() throws RDFBeanException, RepositoryException {
 		return getPeopleInRole(PeopleInRole.HELPER);
 	}
 
-	private Collection<Person> getPeopleInRole(PeopleInRole role) throws RDFBeanException {
+	private Collection<Person> getPeopleInRole(PeopleInRole role) throws RDFBeanException, RepositoryException {
+		checkRepository();
 		Collection<Person> maintainers = new ArrayList<Person>();
 
 		String query = "" +
