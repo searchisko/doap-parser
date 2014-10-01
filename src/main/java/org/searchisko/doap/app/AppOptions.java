@@ -48,10 +48,10 @@ public class AppOptions {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new AppOptions().doMain(args);
+		new AppOptions().parseArgs(args);
 	}
 
-	protected void doMain(String[] args) {
+	protected void parseArgs(String[] args) {
 		CmdLineParser parser = new CmdLineParser(this);
 
 		try {

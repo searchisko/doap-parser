@@ -59,6 +59,7 @@ public class DOAPParser {
 	 * @throws RepositoryException
 	 */
 	public void repositoryInit() throws RepositoryException {
+		log.trace("Initializing repository");
 		if (!repositorySetup) {
 			rep = new SailRepository(new MemoryStore());
 			rep.initialize();
@@ -68,7 +69,7 @@ public class DOAPParser {
 			manager = new RDFBeanManager(model);
 			repositorySetup = true;
 		} else {
-			log.info("Trying to setup the repository but it has been already setup.");
+			log.warn("Trying to setup the repository but it has been already setup.");
 		}
 	}
 
@@ -79,6 +80,7 @@ public class DOAPParser {
 	 */
 	public void repositoryClose() throws RepositoryException {
 		if (repositorySetup) {
+			log.trace("Closing repository");
 			model.close();
 			conn.close();
 			rep.shutDown();
@@ -120,7 +122,8 @@ public class DOAPParser {
 	 */
 	public void loadInputStream(InputStream inputStream) throws RepositoryException, RDFParseException, IOException {
 		checkRepository();
-		conn.add(inputStream, null, RDFFormat.RDFXML);
+//		conn.add(inputStream, null, RDFFormat.RDFXML); // java.lang.AssertionError: Exception Base URI cannot be 'null'
+		conn.add(inputStream, "", RDFFormat.RDFXML);
 	}
 
 	private <T> Collection<T> deserializeFromRepository(Class<T> clazz) throws RDFBeanException, RepositoryException {

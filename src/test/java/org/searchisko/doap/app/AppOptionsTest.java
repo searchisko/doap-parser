@@ -18,28 +18,28 @@ public class AppOptionsTest {
 	@Test
 	public void testNoArgs() {
 		AppOptions appOptions = new AppOptions();
-		appOptions.doMain(new String[]{});
+		appOptions.parseArgs(new String[]{});
 		assertFalse(appOptions.isValid());
 	}
 
 	@Test
 	public void testIncompleteArgs() {
 		AppOptions appOptions = new AppOptions();
-		appOptions.doMain(new String[]{"-doap", "http://doap.location"});
+		appOptions.parseArgs(new String[]{"-doap", "http://doap.location"});
 		assertFalse(appOptions.isValid());
 	}
 
 	@Test
 	public void testInvalidArgs() {
 		AppOptions appOptions = new AppOptions();
-		appOptions.doMain(new String[]{"-doap", "invalid.url"});
+		appOptions.parseArgs(new String[]{"-doap", "invalid.url"});
 		assertFalse(appOptions.isValid());
 	}
 
 	@Test
 	public void testCompleteArgs() {
 		AppOptions appOptions = new AppOptions();
-		appOptions.doMain(new String[]{"-doap", "http://doap.location", "-server", "http://dcp.rest.api/content/"});
+		appOptions.parseArgs(new String[]{"-doap", "http://doap.location", "-server", "http://dcp.rest.api/content/"});
 		assertEquals("http://doap.location", appOptions.getDoapURI().toString());
 		assertEquals("http://dcp.rest.api/content/", appOptions.getServerURI().toString());
 	}
@@ -47,7 +47,7 @@ public class AppOptionsTest {
 	@Test
 	public void testFileArgIsOkToo() {
 		AppOptions appOptions = new AppOptions();
-		appOptions.doMain(new String[]{"-doap", "file:///doap.location", "-server", "http://dcp.rest.api/content/"});
+		appOptions.parseArgs(new String[]{"-doap", "file:///doap.location", "-server", "http://dcp.rest.api/content/"});
 		assertEquals("file:///doap.location", appOptions.getDoapURI().toString());
 		assertEquals("http://dcp.rest.api/content/", appOptions.getServerURI().toString());
 	}

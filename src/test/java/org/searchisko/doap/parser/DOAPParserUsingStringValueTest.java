@@ -6,7 +6,6 @@
 
 package org.searchisko.doap.parser;
 
-import org.apache.commons.io.IOUtils;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.Before;
@@ -18,8 +17,6 @@ import org.searchisko.doap.model.repository.Repository;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
-import java.io.IOException;
-import java.io.StringWriter;
 import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
@@ -27,7 +24,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * @author Lukas Vlcek (lvlcek@redhat.com)
  */
-public class DOAPParserTest {
+public class DOAPParserUsingStringValueTest extends DOAPParserSupport {
 
 	private DOAPParser parser = new DOAPParser();
 
@@ -39,19 +36,6 @@ public class DOAPParserTest {
 	@After
 	public void tearDown() throws RepositoryException {
 		parser.repositoryClose();
-	}
-
-	/**
-	 * Read file from classpath into String. UTF-8 encoding expected.
-	 *
-	 * @param filePath in classpath to read data from.
-	 * @return file content.
-	 * @throws IOException
-	 */
-	public String readStringFromClasspathFile(String filePath) throws IOException {
-		StringWriter stringWriter = new StringWriter();
-		IOUtils.copy(getClass().getResourceAsStream(filePath), stringWriter, "UTF-8");
-		return stringWriter.toString();
 	}
 
 	/**
