@@ -1,0 +1,203 @@
+// Proposal of the new project_info type structure.
+//
+// Definition of property types is based on JSON Schema, see
+// http://json-schema.org/latest/json-schema-validation.html
+//
+// The goal is to unify project.properties (https://www.jboss.org/help/awestructguide/projectpropertyfilestruction.html)
+// and DOAP (http://usefulinc.com/ns/doap#) information into common JSON data structure.
+//
+
+{
+  "type": "object",
+  "properties": {
+
+    // Not used from DOAP:
+    // - old-homepage
+    // - release (including [version, revision, file-release, os, platform])
+    // - os
+    // - platform
+    // - category
+    // - module (used in some repository types)
+    // - screenshots
+    // - implements (including [specification])
+    // - service-endpoint
+    // - language
+    // - vendor (including [organization])
+    // - audience
+
+    // Not used from magnolia: (see https://www.jboss.org/help/awestructguide/projectpropertyfilestruction.html)
+    // - nodePath
+    // - subProjects
+
+    // Normalized Project code populated by Searchisko based on the following fields
+    // DOAP: name
+    // Magnolia: sys_content_id
+    "sys_project": {
+      "type": "string",
+      "required": true
+    },
+
+    // Normalized Human readable Project name populated by Searchisko based on "sys_project"
+    "sys_project_name": {
+      "type": "string",
+      "required": true
+    },
+
+    // Copy of "sys_project_name"
+    "sys_title": {
+      "type": "title"
+    },
+
+    // DOAP: homepage
+    // Magnolia: "homePage"
+    "homepage": {
+      "type": "uri"
+    },
+
+    // DOAP: n/a - we might want to store URL of the DOAP file?
+    // Magnolia: n/a
+    "sys_url_view": {
+      "type": "uri"
+    },
+
+    // DOAP: created
+    // Magnolia: n/a
+    "sys_created": {
+      "type": "date-time"
+    },
+
+    // DOAP: description
+    // Magnolia: description
+    "sys_content": {
+      "type": "description"
+    },
+
+    // DOAP: shortdesc
+    // Magnolia: n/a
+    // If not provided we will take it from "sys_content"
+    "sys_description": {
+      "type": "description"
+    },
+
+    // DOAP: mailing-list
+    // Magnolia: mailingListLink
+    "mailing-list": {
+      "type": "uri"
+    },
+
+    // We want to support projects with multiple-licenses
+    // DOAP: license
+    // Magnolia: license
+    "license": {
+      "type": "array", "items": { "type": "string" }
+    },
+
+    // DOAP: repository and relevant nested data
+    // Magnolia: see inlined comments
+    "repository": {
+      // for each reporitory there will be one JS object in the array
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          // Magnolia: [committerLink, committerGitLink]
+          "location": { "type": "array", "items": { "type": "uri" }},
+          // Magnolia: [srcLink, githubLink, viewvcLink, fisheyeLink]
+          "browse": { "type": "array", "items": { "type": "uri" }},
+          // Magnolia: [anonymousLink, anonymousGitLink]
+          "non-root": { "type": "array", "items": { "type": "uri" }},
+          // Magnolia: n/a - will be derived using heuristics
+          "type": {
+            "enum": ["BKRepository", "CVSRepository", "ArchRepository", "BazaarBranch", "GitRepository", "HgRepository", "DarcsRepository"]
+          }
+        }
+      }
+    },
+
+    // DOAP: [download-page, download-mirror]
+    // Magnolia: downloadsLink
+    "download-page": {
+      "type": "array", "items": { "type": "uri" }
+    },
+
+    // DOAP: wiki
+    // Magnolia: n/a - can we find a good candidate?
+    "wiki": {
+      "type": "uri"
+    },
+
+    // DOAP: bug-database
+    // Magnolia: [issueTrackerLink, jiraLink]
+    "bug-database": {
+      "type": "uri"
+    },
+
+    // DOAP: [maintainer, developer, documenter, translator, tester, helper]
+    // Magnolia: n/a
+    "person": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": "string",
+          "email": "email",
+          "role": {
+            "enum": ["maintainer", "developer", "documenter", "translator", "tester", "helper"]
+          }
+        }
+      }
+    },
+
+    // DOAP: [programming-language]
+    // Magnolia: n/a
+    "programming-language": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    // DOAP: blog
+    // Magnolia: blogLink
+    "blog": {
+      "type": "uri"
+    },
+
+    // DOAP: n/a
+    // Magnolia: archived
+    "archived" : {
+      "type": "boolean" // was "string" !
+    },
+
+    // DOAP: n/a
+    // Magnolia: specialIcon
+    "specialIcon" : {
+      "type": "string"
+    },
+
+    // DOAP: n/a
+    // Magnolia: excludeInProjectMatrix
+    "excludeInProjectMatrix" : {
+      "type": "boolean" // was "string" !
+    },
+
+
+    // ----------------------------------
+    // Not mapped yet (they seem to be very
+    // Magnolia specific with no equivalent
+    // in DOAP for now).
+    // ----------------------------------
+
+    "docsLink" : {"type" : "uri"},
+    "communityLink" : {"type" : "uri"},
+    "knowledgeBaseLink" : {"type" : "uri"},
+    "userForumLink" : {"type" : "uri"},
+    "devForumLink" : {"type" : "uri"},
+    "chatLink" : {"type" : "uri"},
+    "twitterLink" : {"type" : "uri"},
+    "buildLink" : {"type" : "uri"},
+    "hudsonLink" : {"type" : "uri"}
+
+  },
+  "additionalProperties" : false
+}
