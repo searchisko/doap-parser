@@ -38,10 +38,10 @@ public class DOAPParserUsingInputStreamTest extends DOAPParserSupport {
 		String path = "/doap-jboss-examples/narayana.rdf";
 		try {
 			parser.loadInputStream(getInputStreamFromClasspathFile(path));
-//			fail("Exception expected");
+			fail("Exception expected");
 		} catch (Exception e) {
 //			fail("Exception " + e.getMessage());
-			assertTrue(e.getMessage().matches("(.*)unexpected attribute 'rdf:resource'(.*)"));
+			assertTrue(e.getMessage().matches("(.*)Not a valid .absolute. URI:(.*)"));
 		}
 		Project project = parser.getProject();
 		String json = Converter.objectToJSON(project);

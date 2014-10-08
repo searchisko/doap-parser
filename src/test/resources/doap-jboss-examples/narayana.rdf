@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xml:lang="en" xmlns="http://usefulinc.com/ns/doap#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-  <Project rdf:about="http://narayana.io">
-    <name>Narayana</name>
-    <homepage rdf:resource="http://narayana.io" />
-    <shortdesc>Premier open-source transaction manager</shortdesc>
-    <description>Narayana is the leading transaction manager available today. We have implementations of many existing and emerging transaction protocols such as JTA 1.2, REST-AT and WS-AT and WS-BA.</description>
-    <mailing-list rdf:resource="http://narayana.io/lists" />
+  <Project rdf:about="">
+    <name></name>
+    <homepage rdf:resource="" />
+    <shortdesc></shortdesc>
+    <description></description>
+    
     <maintainer>
       <foaf:Person>
         <foaf:name>Tom Jenkinson</foaf:name>
@@ -14,8 +14,8 @@
         <foaf:lastName>Jenkinson</foaf:lastName>
         <foaf:account>
           <foaf:OnlineAccount>
-            <rdf:type rdf:resource="http://xmln.com/foaf/0.1/OnlineAccount">
-            <foaf:accountServiceHomepage rdf:resource="https://community.jboss.org">
+            <rdf:type rdf:resource="http://xmln.com/foaf/0.1/OnlineAccount" />
+            <foaf:accountServiceHomepage rdf:resource="https://community.jboss.org" />
             <foaf:accountName>tomjenkinson</foaf:accountName>
           </foaf:OnlineAccount>
         </foaf:account>
@@ -23,55 +23,13 @@
     </maintainer>
     <developer>
       <foaf:Person>
-        <foaf:name>Mike Musgrove</foaf:name>
-        <foaf:firstName>Mike</foaf:firstName>
-        <foaf:lastName>Musgrove</foaf:lastName>
-        <foaf:account>
-          <foaf:OnlineAccount>
-            <rdf:type rdf:resource="http://xmln.com/foaf/0.1/OnlineAccount">
-            <foaf:accountServiceHomepage rdf:resource="https://community.jboss.org">
-            <foaf:accountName>mmusgrov</foaf:accountName>
-          </foaf:OnlineAccount>
-        </foaf:account>
-      </foaf:Person>
-    </developer>
-    <developer>
-      <foaf:Person>
-        <foaf:name>Gytis Trikleris</foaf:name>
-        <foaf:firstName>Gytis</foaf:firstName>
-        <foaf:lastName>Trikleris</foaf:lastName>
-        <foaf:account>
-          <foaf:OnlineAccount>
-            <rdf:type rdf:resource="http://xmln.com/foaf/0.1/OnlineAccount">
-            <foaf:accountServiceHomepage rdf:resource="https://community.jboss.org">
-            <foaf:accountName>gtrikler</foaf:accountName>
-          </foaf:OnlineAccount>
-        </foaf:account>
-      </foaf:Person>
-    </developer>
-    <developer>
-      <foaf:Person>
-        <foaf:name>Amos Feng</foaf:name>
-        <foaf:firstName>Amos</foaf:firstName>
-        <foaf:lastName>Feng</foaf:lastName>
-        <foaf:account>
-          <foaf:OnlineAccount>
-            <rdf:type rdf:resource="http://xmln.com/foaf/0.1/OnlineAccount">
-            <foaf:accountServiceHomepage rdf:resource="https://community.jboss.org">
-            <foaf:accountName>zhfeng</foaf:accountName>
-          </foaf:OnlineAccount>
-        </foaf:account>
-      </foaf:Person>
-    </developer>
-    <developer>
-      <foaf:Person>
         <foaf:name>Paul Robinson</foaf:name>
         <foaf:firstName>Paul</foaf:firstName>
         <foaf:lastName>Robinson</foaf:lastName>
         <foaf:account>
           <foaf:OnlineAccount>
-            <rdf:type rdf:resource="http://xmln.com/foaf/0.1/OnlineAccount">
-            <foaf:accountServiceHomepage rdf:resource="https://community.jboss.org">
+            <rdf:type rdf:resource="http://xmln.com/foaf/0.1/OnlineAccount" />
+            <foaf:accountServiceHomepage rdf:resource="https://community.jboss.org" />
             <foaf:accountName>paul.robinson</foaf:accountName>
           </foaf:OnlineAccount>
         </foaf:account>
@@ -84,56 +42,76 @@
         <foaf:lastName>Little</foaf:lastName>
         <foaf:account>
           <foaf:OnlineAccount>
-            <rdf:type rdf:resource="http://xmln.com/foaf/0.1/OnlineAccount">
-            <foaf:accountServiceHomepage rdf:resource="https://community.jboss.org">
+            <rdf:type rdf:resource="http://xmln.com/foaf/0.1/OnlineAccount" />
+            <foaf:accountServiceHomepage rdf:resource="https://community.jboss.org" />
             <foaf:accountName>nmcl</foaf:accountName>
           </foaf:OnlineAccount>
         </foaf:account>
       </foaf:Person>
     </developer>
-    <category>Transactions</category>
+    <developer>
+      <foaf:Person>
+        <foaf:name>Amos Feng</foaf:name>
+        <foaf:firstName>Amos</foaf:firstName>
+        <foaf:lastName>Feng</foaf:lastName>
+        <foaf:account>
+          <foaf:OnlineAccount>
+            <rdf:type rdf:resource="http://xmln.com/foaf/0.1/OnlineAccount" />
+            <foaf:accountServiceHomepage rdf:resource="https://community.jboss.org" />
+            <foaf:accountName>zhfeng</foaf:accountName>
+          </foaf:OnlineAccount>
+        </foaf:account>
+      </foaf:Person>
+    </developer>
+    <developer>
+      <foaf:Person>
+        <foaf:name>Gytis Trikleris</foaf:name>
+        <foaf:firstName>Gytis</foaf:firstName>
+        <foaf:lastName>Trikleris</foaf:lastName>
+        <foaf:account>
+          <foaf:OnlineAccount>
+            <rdf:type rdf:resource="http://xmln.com/foaf/0.1/OnlineAccount" />
+            <foaf:accountServiceHomepage rdf:resource="https://community.jboss.org" />
+            <foaf:accountName>gtrikler</foaf:accountName>
+          </foaf:OnlineAccount>
+        </foaf:account>
+      </foaf:Person>
+    </developer>
+    <developer>
+      <foaf:Person>
+        <foaf:name>Mike Musgrove</foaf:name>
+        <foaf:firstName>Mike</foaf:firstName>
+        <foaf:lastName>Musgrove</foaf:lastName>
+        <foaf:account>
+          <foaf:OnlineAccount>
+            <rdf:type rdf:resource="http://xmln.com/foaf/0.1/OnlineAccount" />
+            <foaf:accountServiceHomepage rdf:resource="https://community.jboss.org" />
+            <foaf:accountName>mmusgrov</foaf:accountName>
+          </foaf:OnlineAccount>
+        </foaf:account>
+      </foaf:Person>
+    </developer>
+    
     <release>
       <Version>
-        <name>Narayana 5.0.2.Final</name>
-        <revision>5.0.2.Final</revision>
-        <created>2014-06-02</created>
-      </Version>
-    </release>
-    <release>
-      <Version>
-        <name>JBossTS 4.17.7.Final</name>
+        <name></name>
         <revision>4.17.7.Final</revision>
         <created>2014-07-19</created>
       </Version>
     </release>
     <license rdf:resource="" />
-    <repository>
-      <GitRepository>
-        <location rdf:resource="http://github.com/jbosstm/" />
-        
-        
-        
-      </GitRepository>
-    </repository>
-    <bug-database rdf:resource="http://issues.jboss.org/browse/JBTM" />
-    <wiki rdf:resource="https://developer.jboss.org/en/jbosstm" />
+    
+    
     <programming-language>Java</programming-language>
-    <vendor>Red Hat JBoss</vendor>
+    <programming-language>C/C++</programming-language>
+    <vendor></vendor>
     <implements>
       <Specification>
         <name>Java Transaction API</name>
         <description></description>
-        <rdfs:seeAlso rdf:resource="https://jcp.org/en/jsr/detail?id=907"/>
+        <rdfs:seeAlso rdf:resource="https://jcp.org/en/jsr/detail?id=907" />
       </Specification>
     </implements>
-    <foaf:logo rdf:resource="http://www.jboss.org/dms/narayana/images/narayana-banner-1180px.png" />
-    <foaf:account>
-      <foaf:OnlineAccount>
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/OnlineChatAccount"/>
-        <foaf:accountServiceHomepage rdf:resource="http:&#x2F;&#x2F;jbossts.blogspot.co.uk&#x2F;"/>
-        <foaf:accountName>jbossts</foaf:accountName>
-      </foaf:OnlineAccount>
-    </foaf:account>
+    <foaf:logo rdf:resource="" />
   </Project>
 </rdf:RDF>
-
