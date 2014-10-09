@@ -28,6 +28,7 @@
     // Not used from magnolia: (see https://www.jboss.org/help/awestructguide/projectpropertyfilestruction.html)
     // - nodePath
     // - subProjects
+    // - excludeInProjectMatrix
 
     // Normalized Project code populated by Searchisko based on the following fields
     // DOAP: name
@@ -174,13 +175,6 @@
     "specialIcon" : {
       "type": "string"
     },
-
-    // DOAP: n/a
-    // Magnolia: excludeInProjectMatrix
-    "excludeInProjectMatrix" : {
-      "type": "boolean" // was "string" !
-    },
-
 
     // ----------------------------------
     // Not mapped yet (they seem to be very
