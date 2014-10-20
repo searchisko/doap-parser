@@ -229,6 +229,44 @@
       }
     },
 
+    // DOAP: containsProjects
+    // Magnolia: n/a
+    "containsProjects" : {
+      "type": "object",
+        "properties": {
+          "name": { "type": "string"}
+       }
+    },
+
+    // DOAP: containedWithinProjects
+    // Magnolia: n/a
+    "containedWithinProjects" : {
+      "type": "object",
+        "properties": {
+          "name": { "type": "string"}
+       }
+    },
+
+    // DOAP: status
+    // Magnolia: n/a
+    "status" : {
+      "type": {
+       "enum": ["incubating", "active", "sustained", "retired"]
+      }
+    },
+
+    // DOAP: userForum
+    // Magnolia: n/a
+    "userForum": {
+      "type": "uri"
+    },
+
+    // DOAP: developerForum
+    // Magnolia: n/a
+    "developerForum": {
+      "type": "uri"
+    },
+
     // ----------------------------------
     // Not mapped yet (they seem to be very
     // Magnolia specific with no equivalent
