@@ -13,16 +13,13 @@
 
     // Not used from DOAP:
     // - old-homepage
-    // - release (including [version, revision, file-release, os, platform])
     // - os
     // - platform
     // - category
     // - module (used in some repository types)
     // - screenshots
-    // - implements (including [specification])
     // - service-endpoint
     // - language
-    // - vendor (including [organization])
     // - audience
 
     // Not used from magnolia: (see https://www.jboss.org/help/awestructguide/projectpropertyfilestruction.html)
@@ -142,8 +139,9 @@
         "properties": {
           "name": "string",
           "email": "email",
+          "communityAccount": "string",
           "role": {
-            "enum": ["maintainer", "developer", "documenter", "translator", "tester", "helper"]
+            "enum": ["lead", "maintainer", "developer", "documenter", "translator", "tester", "helper"]
           }
         }
       }
@@ -174,6 +172,61 @@
     // Magnolia: specialIcon
     "specialIcon" : {
       "type": "string"
+    },
+
+    // DOAP: vendor
+    // Magnolia: n/a
+    "vendor" : {
+      "type": {
+       "enum": ["red hat", "eclipse", "apache"]
+      }
+    },
+
+    // DOAP: implements-specification
+    // Magnolia: n/a
+    "implementsSpecification" : {
+      "type": "object",
+        "properties": {
+          "name": { "type": "string"},
+          "description": { "type": "string"},
+          "seeAlso": { "type": "uri"}
+       }
+    },
+
+    // DOAP: release
+    // Magnolia: n/a
+    "releases" : {
+      // For each release there will be one JS object in the array
+      "type": "array",
+      "items" : {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string"},
+          "revision": { "type": "string"},
+          "created": { "type": "date"}
+          }
+      }
+    },
+
+    // DOAP: logo
+    // Magnolia: n/a
+    "logo" : {
+      "type": "uri"
+    },
+
+    // DOAP: account
+    // Magnolia: n/a
+    "accounts" : {
+      // For each account there will be one JS object in the array
+      "type": "array",
+      "items" : {
+        "type": "object",
+        "properties": {
+          "name": { "type": "uri"},
+          "revision": { "accountServiceHomepage": "uri"},
+          "created": { "accountName": "string"}
+          }
+      }
     },
 
     // ----------------------------------
