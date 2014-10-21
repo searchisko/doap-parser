@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xml:lang="en" xmlns="http://usefulinc.com/ns/doap#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-  <Project rdf:about="">
-    <name></name>
-    <homepage rdf:resource="" />
-    <shortdesc></shortdesc>
-    <description></description>
-    
+  <Project rdf:about="http://www.narayana.io">
+    <name>Narayana</name>
+    <homepage rdf:resource="http://www.narayana.io" />
+    <shortdesc>Narayana is the premier open source transaction manager.</shortdesc>
+    <description>With over 20 years of expertise in the area of transaction processing, Narayana is the premier open source transaction manager. It has been used extensively within industry and to drive standards including the OMG and Web Services.</description>
+    <mailing-list rdf:resource="http://narayana.jboss.org/lists" />
     <maintainer>
       <foaf:Person>
         <foaf:name>Tom Jenkinson</foaf:name>
@@ -95,23 +95,31 @@
     <release>
       <Version>
         <name></name>
-        <revision>4.17.7.Final</revision>
-        <created>2014-07-19</created>
+        <revision>5.0.2.Final</revision>
+        <created>2014-06-02</created>
       </Version>
     </release>
-    <license rdf:resource="" />
-    
+    <license rdf:resource="http://opensource.org/licenses/LGPL-2.1" />
+    <repository>
+      <GitRepository>
+        <location rdf:resource="git@github.com:jbosstm/narayana.git" />
+        <browse rdf:resource="https://github.com/jbosstm/narayana" />
+        
+        
+      </GitRepository>
+    </repository>
+    <bug-database rdf:resource="https://issues.jboss.org/browse/JBTM" />
     
     <programming-language>Java</programming-language>
     <programming-language>C/C++</programming-language>
-    <vendor></vendor>
+    <vendor>Red Hat</vendor>
     <implements>
       <Specification>
-        <name>Java Transaction API</name>
+        <name>JTA 1.2</name>
         <description></description>
-        <rdfs:seeAlso rdf:resource="https://jcp.org/en/jsr/detail?id=907" />
+        <rdfs:seeAlso rdf:resource="https://java.net/projects/jta-spec" />
       </Specification>
     </implements>
-    <foaf:logo rdf:resource="" />
+    <foaf:logo rdf:resource="http://static.jboss.org/narayana/images/narayana_200x150.png" />
   </Project>
 </rdf:RDF>

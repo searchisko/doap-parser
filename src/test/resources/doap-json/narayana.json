@@ -1,0 +1,15 @@
+{
+  "name" : "Narayana",
+  "homepage" : "http://www.narayana.io",
+  "shortdesc" : "Narayana is the premier open source transaction manager.",
+  "description" : "With over 20 years of expertise in the area of transaction processing, Narayana is the premier open source transaction manager. It has been used extensively within industry and to drive standards including the OMG and Web Services.",
+  "release" : [ {
+    "name" : "",
+    "created" : "2014-06-02",
+    "revision" : "5.0.2.Final"
+  } ],
+  "license" : "http://opensource.org/licenses/LGPL-2.1",
+  "mailing-list" : "http://narayana.jboss.org/lists",
+  "bug-database" : "https://issues.jboss.org/browse/JBTM",
+  "programming-language" : [ "C/C++", "Java" ]
+}

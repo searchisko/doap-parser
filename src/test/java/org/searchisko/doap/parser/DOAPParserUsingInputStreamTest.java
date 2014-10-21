@@ -11,9 +11,8 @@ import org.junit.Test;
 import org.openrdf.repository.RepositoryException;
 import org.searchisko.doap.json.Converter;
 import org.searchisko.doap.model.Project;
-
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import org.skyscreamer.jsonassert.JSONAssert;
+import org.skyscreamer.jsonassert.JSONCompareMode;
 
 /**
  * @author Lukas Vlcek (lvlcek@redhat.com)
@@ -36,15 +35,9 @@ public class DOAPParserUsingInputStreamTest extends DOAPParserSupport {
 	public void testNarayanaProjectParsingFails() throws Exception {
 //		URI uri = new URI("https://raw.githubusercontent.com/jbosstm/project-metadata/master/narayana.rdf");
 		String path = "/doap-jboss-examples/narayana.rdf";
-		try {
-			parser.loadInputStream(getInputStreamFromClasspathFile(path));
-			fail("Exception expected");
-		} catch (Exception e) {
-//			fail("Exception " + e.getMessage());
-			assertTrue(e.getMessage().matches("(.*)Not a valid .absolute. URI:(.*)"));
-		}
+		parser.loadInputStream(getInputStreamFromClasspathFile(path));
 		Project project = parser.getProject();
 		String json = Converter.objectToJSON(project);
-//		JSONAssert.assertEquals(readStringFromClasspathFile("/doap-json/camel.json"), json, JSONCompareMode.NON_EXTENSIBLE);
+		JSONAssert.assertEquals(readStringFromClasspathFile("/doap-json/narayana.json"), json, JSONCompareMode.NON_EXTENSIBLE);
 	}
 }
