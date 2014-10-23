@@ -1,13 +1,26 @@
-// Proposal of the new project_info type structure.
-//
-// Definition of property types is based on JSON Schema, see
-// http://json-schema.org/latest/json-schema-validation.html
-//
-// The goal is to unify project.properties (https://www.jboss.org/help/awestructguide/projectpropertyfilestruction.html)
-// and DOAP (http://usefulinc.com/ns/doap#) information into common JSON data structure.
-//
+/*
+ * JBoss, Home of Professional Open Source
+ * Copyright 2014 Red Hat Inc. and/or its affiliates and other contributors
+ * as indicated by the @authors tag. All rights reserved.
+ */
+
+/*
+ * Proposal of the new project_info type structure.
+ *
+ * Definition of property types is based on JSON Schema, see
+ * http://json-schema.org/latest/json-schema-validation.html
+ *
+ * The goal is to unify project.properties (https://www.jboss.org/help/awestructguide/projectpropertyfilestruction.html)
+ * and DOAP (http://usefulinc.com/ns/doap#) information into common JSON data structure.
+ *
+ * @author lvlcek@redhat.com (Lukáš Vlček)
+ * @author paul.robinson@redhat.com (Paul Robinson)
+ */
 
 {
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Project Info Schema",
+  "description": "Schema of Project Info used in Searchisko",
   "type": "object",
   "properties": {
 
@@ -27,83 +40,103 @@
     // - subProjects
     // - excludeInProjectMatrix
 
-    // Normalized Project code populated by Searchisko based on the following fields
     // DOAP: name
     // Magnolia: sys_content_id
     "sys_project": {
-      "type": "string",
-      "required": true
+      "description": "Normalized Project code populated by Searchisko",
+      "type": "string"
     },
 
-    // Normalized Human readable Project name populated by Searchisko based on "sys_project"
     "sys_project_name": {
-      "type": "string",
-      "required": true
+      "description": "Normalized Human readable Project name populated by Searchisko",
+      "type": "string"
     },
 
     // Copy of "sys_project_name"
     "sys_title": {
-      "type": "title"
+      "description": "Copy of sys_project_name",
+      "type": "string"
     },
 
     // DOAP: homepage
     // Magnolia: "homePage"
     "homepage": {
-      "type": "uri"
+      "description": "URL of a project's homepage, associated with exactly one project.",
+      "type": "string",
+      "format": "uri"
     },
 
     // DOAP: n/a - we might want to store URL of the DOAP file?
     // Magnolia: n/a
     "sys_url_view": {
-      "type": "uri"
+      "description": "",
+      "type": "string",
+      "format": "uri"
     },
 
     // DOAP: created
     // Magnolia: n/a
     "sys_created": {
-      "type": "date-time"
+      "description": "Date when project was created.",
+      "type": "string",
+      "format": "date-time"
     },
 
     // DOAP: description
     // Magnolia: description
     "sys_content": {
-      "type": "description"
+      "description": "Plain text description of a project, of 2-4 sentences in length.",
+      "type": "string"
     },
 
     // DOAP: shortdesc
     // Magnolia: n/a
     // If not provided we will take it from "sys_content"
     "sys_description": {
-      "type": "description"
+      "description": "Short (8 or 9 words) plain text description of a project.",
+      "type": "string"
     },
 
     // DOAP: mailing-list
     // Magnolia: mailingListLink
     "mailing-list": {
-      "type": "uri"
+      "description": "Mailing list home page or email address.",
+      "type": "string",
+      "format": "uri"
     },
 
     // We want to support projects with multiple-licenses
     // DOAP: license
     // Magnolia: license
     "license": {
+      "description": "The URI of an RDF description of the license the software is distributed under.",
       "type": "array", "items": { "type": "string" }
     },
 
     // DOAP: repository and relevant nested data
     // Magnolia: see inlined comments
     "repository": {
+      "description": "Source code repository.",
       // for each reporitory there will be one JS object in the array
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           // Magnolia: [committerLink, committerGitLink]
-          "location": { "type": "array", "items": { "type": "uri" }},
+          "location": { "type": "array", "items": {
+            "type": "string",
+            "format": "uri"
+          }},
           // Magnolia: [srcLink, githubLink, viewvcLink, fisheyeLink]
-          "browse": { "type": "array", "items": { "type": "uri" }},
+          "browse": { "type": "array", "items": {
+            "type": "string",
+            "format": "uri"
+          }},
           // Magnolia: [anonymousLink, anonymousGitLink]
-          "non-root": { "type": "array", "items": { "type": "uri" }},
+          "non-root": { "type": "array", "items": {
+            "type": "string",
+            "format": "uri"
+          }},
           // Magnolia: n/a - will be derived using heuristics
           "type": {
             "enum": ["BKRepository", "CVSRepository", "ArchRepository", "BazaarBranch", "GitRepository", "HgRepository", "DarcsRepository"]
@@ -115,31 +148,40 @@
     // DOAP: [download-page, download-mirror]
     // Magnolia: downloadsLink
     "download-page": {
-      "type": "array", "items": { "type": "uri" }
+      "description": "Web page from which the project software can be downloaded.",
+      "type": "array", "items": {
+        "type": "string",
+        "format": "uri"
+      }
     },
 
     // DOAP: wiki
     // Magnolia: n/a - can we find a good candidate?
     "wiki": {
-      "type": "uri"
+      "description": "URL of Wiki for collaborative discussion of project.",
+      "type": "string",
+      "format": "uri"
     },
 
     // DOAP: bug-database
     // Magnolia: [issueTrackerLink, jiraLink]
     "bug-database": {
-      "type": "uri"
+      "description": "",
+      "type": "string",
+      "format": "uri"
     },
 
-    // DOAP: [maintainer, developer, documenter, translator, tester, helper]
+    // DOAP: [maintainer, developer, documenter, translator, tester, helper] + ([lead]: JBoss extension)
     // Magnolia: n/a
     "person": {
+      "description": "Person having a specific role in the project.",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "name": "string",
-          "email": "email",
-          "communityAccount": "string",
+          "name": { "type": "string" },
+          "email": { "type": "string", "format": "email" },
+          "communityAccount": { "type": "string" },
           "role": {
             "enum": ["lead", "maintainer", "developer", "documenter", "translator", "tester", "helper"]
           }
@@ -150,6 +192,7 @@
     // DOAP: [programming-language]
     // Magnolia: n/a
     "programming-language": {
+      "description": "Programming language a project is implemented in or intended for use with.",
       "type": "array",
       "items": {
         "type": "string"
@@ -159,43 +202,48 @@
     // DOAP: blog
     // Magnolia: blogLink
     "blog": {
-      "type": "uri"
+      "description": "URI of a blog related to a project.",
+      "type": "string",
+      "format": "uri"
     },
 
     // DOAP: n/a
     // Magnolia: archived
     "archived" : {
+      "description": "",
       "type": "boolean" // was "string" !
     },
 
     // DOAP: n/a
     // Magnolia: specialIcon
     "specialIcon" : {
+      "description": "",
       "type": "string"
     },
 
     // DOAP: vendor
     // Magnolia: n/a
     "vendor" : {
-      "type": {
-       "enum": ["red hat", "eclipse", "apache"]
-      }
+      "description": "Vendor organization: commercial, free or otherwise.",
+      "enum": ["red hat", "eclipse", "apache"]
     },
 
     // DOAP: implements-specification
     // Magnolia: n/a
     "implementsSpecification" : {
+      "description": "A specification that a project implements. Could be a standard, API or legally defined level of conformance.",
       "type": "object",
         "properties": {
           "name": { "type": "string"},
           "description": { "type": "string"},
-          "seeAlso": { "type": "uri"}
+          "seeAlso": { "type": "string", "format": "uri"}
        }
     },
 
     // DOAP: release
     // Magnolia: n/a
     "releases" : {
+      "description": "A project release.",
       // For each release there will be one JS object in the array
       "type": "array",
       "items" : {
@@ -203,69 +251,76 @@
         "properties": {
           "name": { "type": "string"},
           "revision": { "type": "string"},
-          "created": { "type": "date"}
+          "created": { "type": "string", "format": "date-time"}
           }
       }
     },
 
-    // DOAP: logo
+    // DOAP: logo: JBoss extension
     // Magnolia: n/a
     "logo" : {
-      "type": "uri"
+      "description": "",
+      "type": "string",
+      "format": "uri"
     },
 
-    // DOAP: account
+    // DOAP: account: JBoss extension
     // Magnolia: n/a
     "accounts" : {
+      "description": "",
       // For each account there will be one JS object in the array
       "type": "array",
       "items" : {
         "type": "object",
         "properties": {
-          "name": { "type": "uri"},
-          "revision": { "accountServiceHomepage": "uri"},
-          "created": { "accountName": "string"}
+          "accountServiceHomepage": { "type": "string", "format": "uri" },
+          "accountName": { "type": "string" }
           }
       }
     },
 
-    // DOAP: containsProjects
+    // DOAP: containsProjects: JBoss extension
     // Magnolia: n/a
     "containsProjects" : {
+      "description": "",
       "type": "object",
         "properties": {
           "name": { "type": "string"}
        }
     },
 
-    // DOAP: containedWithinProjects
+    // DOAP: containedWithinProjects: JBoss extension
     // Magnolia: n/a
     "containedWithinProjects" : {
+      "description": "",
       "type": "object",
         "properties": {
           "name": { "type": "string"}
        }
     },
 
-    // DOAP: status
+    // DOAP: status: JBoss extension
     // Magnolia: n/a
     "status" : {
-      "type": {
-       "enum": ["incubating", "active", "sustained", "retired"]
-      }
+      "description": "",
+      "enum": ["incubating", "active", "sustained", "retired"]
     },
 
     // DOAP: userForum
-    // Magnolia: n/a
+    // Magnolia: userForumLink
     "userForum": {
-      "type": "uri"
+      "description": "",
+      "type": "string",
+      "format": "uri"
     },
 
     // DOAP: developerForum
-    // Magnolia: n/a
+    // Magnolia: devForumLink
     "developerForum": {
-      "type": "uri"
-    },
+      "description": "",
+      "type": "string",
+      "format": "uri"
+    }
 
     // ----------------------------------
     // Not mapped yet (they seem to be very
@@ -273,16 +328,17 @@
     // in DOAP for now).
     // ----------------------------------
 
+    /*
     "docsLink" : {"type" : "uri"},
     "communityLink" : {"type" : "uri"},
     "knowledgeBaseLink" : {"type" : "uri"},
-    "userForumLink" : {"type" : "uri"},
-    "devForumLink" : {"type" : "uri"},
     "chatLink" : {"type" : "uri"},
     "twitterLink" : {"type" : "uri"},
     "buildLink" : {"type" : "uri"},
     "hudsonLink" : {"type" : "uri"}
-
+    */
   },
+  "required": ["sys_project", "homepage"],
   "additionalProperties" : false
+
 }
