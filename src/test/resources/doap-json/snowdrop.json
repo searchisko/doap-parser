@@ -1,0 +1,14 @@
+{
+  "name" : "Snowdrop",
+  "homepage" : "http://snowdrop.jboss.org/",
+  "shortdesc" : "Support Spring on JBoss",
+  "description" : "A utilities library containing extensions to Spring Framework classes, that can be used wherever the generic implementations provided by the Spring Framework do not integrate correctly with the JBoss Application Server, or for integrating directly with the underlying JBoss Microcontainer\n\nJBoss AS-specific components for deploying and running Spring applications (the Spring Deployer)",
+  "release" : [ {
+    "name" : "",
+    "created" : "2014/03/13",
+    "revision" : "3.1.2.Final"
+  } ],
+  "license" : "http://opensource.org/licenses/LGPL-2.1",
+  "bug-database" : "https://issues.jboss.org/browse/SNOWDROP",
+  "programming-language" : [ "Java" ]
+}

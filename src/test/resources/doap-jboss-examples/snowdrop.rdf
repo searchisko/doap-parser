@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en" xmlns="http://usefulinc.com/ns/doap#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <Project rdf:about="http://snowdrop.jboss.org/">
+    <name>Snowdrop</name>
+    <homepage rdf:resource="http://snowdrop.jboss.org/" />
+    <shortdesc>Support Spring on JBoss</shortdesc>
+    <description>A utilities library containing extensions to Spring Framework classes, that can be used wherever the generic implementations provided by the Spring Framework do not integrate correctly with the JBoss Application Server, or for integrating directly with the underlying JBoss Microcontainer
+
+JBoss AS-specific components for deploying and running Spring applications (the Spring Deployer)
+</description>
+    
+    <maintainer>
+      <foaf:Person>
+        <foaf:name>Joshua Wilson</foaf:name>
+        <foaf:status>Project Lead</foaf:status>
+        <foaf:firstName>Joshua</foaf:firstName>
+        <foaf:lastName>Wilson</foaf:lastName>
+        <foaf:account>
+          <foaf:OnlineAccount>
+            <rdf:type rdf:resource="http://xmln.com/foaf/0.1/OnlineAccount" />
+            <foaf:accountServiceHomepage rdf:resource="https://community.jboss.org" />
+            <foaf:accountName>jowilson</foaf:accountName>
+          </foaf:OnlineAccount>
+        </foaf:account>
+      </foaf:Person>
+    </maintainer>
+    
+    <release>
+      <Version>
+        <name></name>
+        <revision>3.1.2.Final</revision>
+        <created>2014/03/13</created>
+      </Version>
+    </release>
+    <license rdf:resource="http://opensource.org/licenses/LGPL-2.1" />
+    <repository>
+      <GitRepository>
+        <location rdf:resource="https://github.com/snowdrop/snowdrop.git" />
+        <browse rdf:resource="https://github.com/snowdrop/snowdrop" />
+        
+        
+      </GitRepository>
+    </repository>
+    <bug-database rdf:resource="https://issues.jboss.org/browse/SNOWDROP" />
+    
+    <programming-language>Java</programming-language>
+    <vendor>Red Hat</vendor>
+    <foaf:logo rdf:resource="http://static.jboss.org/snowdrop/images/snowdrop_200x150.png" />
+  </Project>
+</rdf:RDF>
+

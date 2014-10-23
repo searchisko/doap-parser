@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en" xmlns="http://usefulinc.com/ns/doap#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <Project rdf:about="http://liveoak.io/">
+    <name>LiveOak</name>
+    <homepage rdf:resource="http://liveoak.io/" />
+    <shortdesc>LiveOak is a backend-as-a-service stack that simplifies development for mobile and standard web clients. Its goal is to enable client-side access to traditional backend services without having to write server-side code.</shortdesc>
+    <description>LiveOak is a backend-as-a-service stack that simplifies development for mobile and standard web clients. Its goal is to enable client-side access to traditional backend services without having to write server-side code.
+
+LiveOak's fundamental architectural approach is REST to the core. LiveOak provides publish/subscribe, push-to-the-mobile-client, and REST-based APIs to shuffle data between mobile handsets, traditional desktops, and other servers in a local cluster or in the cloud.</description>
+    <mailing-list rdf:resource="http://liveoak.io/community/" />
+    <maintainer>
+      <foaf:Person>
+        <foaf:name>Ken Finnigan</foaf:name>
+        <foaf:status>Project Lead</foaf:status>
+        <foaf:firstName>Ken</foaf:firstName>
+        <foaf:lastName>Finnigan</foaf:lastName>
+        <foaf:account>
+          <foaf:OnlineAccount>
+            <rdf:type rdf:resource="http://xmln.com/foaf/0.1/OnlineAccount" />
+            <foaf:accountServiceHomepage rdf:resource="https://community.jboss.org" />
+            <foaf:accountName>kenfinni</foaf:accountName>
+          </foaf:OnlineAccount>
+        </foaf:account>
+      </foaf:Person>
+    </maintainer>
+    <developer>
+      <foaf:Person>
+        <foaf:name>Matt Wringe</foaf:name>
+        <foaf:firstName>Matt</foaf:firstName>
+        <foaf:lastName>Wringe</foaf:lastName>
+        <foaf:account>
+          <foaf:OnlineAccount>
+            <rdf:type rdf:resource="http://xmln.com/foaf/0.1/OnlineAccount" />
+            <foaf:accountServiceHomepage rdf:resource="https://community.jboss.org" />
+            <foaf:accountName>mwringe</foaf:accountName>
+          </foaf:OnlineAccount>
+        </foaf:account>
+      </foaf:Person>
+    </developer>
+    <developer>
+      <foaf:Person>
+        <foaf:name>Marko Strukelj</foaf:name>
+        <foaf:firstName>Marko</foaf:firstName>
+        <foaf:lastName>Strukelj</foaf:lastName>
+        <foaf:account>
+          <foaf:OnlineAccount>
+            <rdf:type rdf:resource="http://xmln.com/foaf/0.1/OnlineAccount" />
+            <foaf:accountServiceHomepage rdf:resource="https://community.jboss.org" />
+            <foaf:accountName>mstruk</foaf:accountName>
+          </foaf:OnlineAccount>
+        </foaf:account>
+      </foaf:Person>
+    </developer>
+    
+    <release>
+      <Version>
+        <name></name>
+        <revision>1.0.0.Alpha01</revision>
+        <created>2014-05-27</created>
+      </Version>
+    </release>
+    <license rdf:resource="http://opensource.org/licenses/EPL-1.0" />
+    <repository>
+      <GitRepository>
+        <location rdf:resource="https://github.com/liveoak-io/liveoak" />
+        <browse rdf:resource="https://github.com/liveoak-io/liveoak" />
+        
+        
+      </GitRepository>
+    </repository>
+    <bug-database rdf:resource="https://issues.jboss.org/browse/LIVEOAK" />
+    <wiki rdf:resource="http://liveoak.io/docs/" />
+    <programming-language>Java</programming-language>
+    <programming-language>HTML5</programming-language>
+    <vendor>Red Hat</vendor>
+    <foaf:logo rdf:resource="http://static.jboss.org/liveoak/images/liveoak_250x150.png" />
+    <foaf:account>
+      <foaf:OnlineAccount>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/OnlineChatAccount" />
+        <foaf:accountServiceHomepage rdf:resource="http://twitter.com" />
+        <foaf:accountName>@liveoak_io</foaf:accountName>
+      </foaf:OnlineAccount>
+    </foaf:account>
+    <foaf:account>
+      <foaf:OnlineAccount>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/OnlineChatAccount" />
+        <foaf:accountServiceHomepage rdf:resource="http://plus.google.com" />
+        <foaf:accountName>LiveOak Project</foaf:accountName>
+      </foaf:OnlineAccount>
+    </foaf:account>
+  </Project>
+</rdf:RDF>
+
