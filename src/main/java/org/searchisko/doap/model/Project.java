@@ -39,7 +39,9 @@ public class Project {
 	private URI old_homepage;
     @JsonProperty("sys_created")
 	private String created;
+    @JsonProperty("sys_description")
 	private String shortdesc;
+    @JsonProperty("sys_content")
 	private String description;
 	private Collection<Version> release;
 	@JsonProperty("mailing-list")

@@ -1,8 +1,8 @@
 {
   "sys_project_name" : "Snowdrop",
   "homepage" : "http://snowdrop.jboss.org/",
-  "shortdesc" : "Support Spring on JBoss",
-  "description" : "A utilities library containing extensions to Spring Framework classes, that can be used wherever the generic implementations provided by the Spring Framework do not integrate correctly with the JBoss Application Server, or for integrating directly with the underlying JBoss Microcontainer\n\nJBoss AS-specific components for deploying and running Spring applications (the Spring Deployer)",
+  "sys_description" : "Support Spring on JBoss",
+  "sys_content" : "A utilities library containing extensions to Spring Framework classes, that can be used wherever the generic implementations provided by the Spring Framework do not integrate correctly with the JBoss Application Server, or for integrating directly with the underlying JBoss Microcontainer\n\nJBoss AS-specific components for deploying and running Spring applications (the Spring Deployer)",
   "release" : [ {
     "name" : "",
     "created" : "2014/03/13",
