@@ -40,13 +40,15 @@
     // - subProjects
     // - excludeInProjectMatrix
 
-    // DOAP: name
-    // Magnolia: sys_content_id
+    // DOAP: n/a
+    // Magnolia: n/a
     "sys_project": {
       "description": "Normalized Project code populated by Searchisko based on sys_project_name",
       "type": "string"
     },
 
+    // DOAP: name
+    // Magnolia: sys_content_id
     "sys_project_name": {
       "description": "Normalized Human readable Project name populated by client",
       "type": "string"
