@@ -44,7 +44,7 @@ public class DOAPParserUsingStringValueTest extends DOAPParserSupport {
 	 */
 	@Test
 	public void testCamelProjectParsing() throws Exception {
-		parser.loadLocalFile(getClass().getResource("/doap-asf-examples/doap_camel.rdf").getPath());
+		parser.loadLocalFile(getClass().getResource("/doap-asf-jboss-contributions/doap_camel.rdf").getPath());
 		Project project = parser.getProject();
 		String json = Converter.objectToJSON(project);
 		JSONAssert.assertEquals(readStringFromClasspathFile("/doap-json/camel.json"), json, JSONCompareMode.NON_EXTENSIBLE);
@@ -56,7 +56,7 @@ public class DOAPParserUsingStringValueTest extends DOAPParserSupport {
 	 */
 	@Test
 	public void testMavenProjectParsing() throws Exception {
-		parser.loadLocalFile(getClass().getResource("/doap-asf-examples/doap_maven.rdf").getPath());
+		parser.loadLocalFile(getClass().getResource("/doap-asf-jboss-contributions/doap_maven.rdf").getPath());
 		Project project = parser.getProject();
 		String json = Converter.objectToJSON(project);
 		JSONAssert.assertEquals(readStringFromClasspathFile("/doap-json/maven.json"), json, JSONCompareMode.NON_EXTENSIBLE);
@@ -68,7 +68,7 @@ public class DOAPParserUsingStringValueTest extends DOAPParserSupport {
 	 */
 	@Test
 	public void testPersonParsing() throws Exception {
-		parser.loadLocalFile(getClass().getResource("/doap-asf-examples/doap_maven.rdf").getPath());
+		parser.loadLocalFile(getClass().getResource("/doap-asf-jboss-contributions/doap_maven.rdf").getPath());
 		Collection<Person> persons = parser.getPersons();
 		for (Person p : persons) {
 			Converter.objectToJSON(p);
@@ -82,7 +82,7 @@ public class DOAPParserUsingStringValueTest extends DOAPParserSupport {
 	 */
 	@Test
 	public void testVersionParsing() throws Exception {
-		parser.loadLocalFile(getClass().getResource("/doap-asf-examples/doap_maven.rdf").getPath());
+		parser.loadLocalFile(getClass().getResource("/doap-asf-jboss-contributions/doap_maven.rdf").getPath());
 		Collection<Version> versions = parser.getVersions();
 		for (Version p : versions) {
 			Converter.objectToJSON(p);
@@ -96,7 +96,7 @@ public class DOAPParserUsingStringValueTest extends DOAPParserSupport {
 	 */
 	@Test
 	public void testRepositoryParsing() throws Exception {
-		parser.loadLocalFile(getClass().getResource("/doap-asf-examples/doap_perl.rdf").getPath());
+		parser.loadLocalFile(getClass().getResource("/doap-asf-other/doap_perl.rdf").getPath());
 		Collection<? extends Repository> repositories = parser.getSVNRepository();
 		for (Repository r : repositories) {
 			Converter.objectToJSON(r);
@@ -154,7 +154,7 @@ public class DOAPParserUsingStringValueTest extends DOAPParserSupport {
 	 */
 	@Test
 	public void testMaintainerParsing() throws Exception {
-		parser.loadLocalFile(getClass().getResource("/doap-asf-examples/doap_maven.rdf").getPath());
+		parser.loadLocalFile(getClass().getResource("/doap-asf-jboss-contributions/doap_maven.rdf").getPath());
 		Collection<Person> maintainers  = parser.getMaintainers();
 		Converter.objectToJSON(maintainers);
 		assertEquals(14, maintainers.size());

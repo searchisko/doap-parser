@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl"?>
+<!--
+   Licensed to the Apache Software Foundation (ASF) under one or more
+   contributor license agreements.  See the NOTICE file distributed with
+   this work for additional information regarding copyright ownership.
+   The ASF licenses this file to You under the Apache License, Version 2.0
+   (the "License"); you may not use this file except in compliance with
+   the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<rdf:RDF xml:lang="en"
+         xmlns="http://usefulinc.com/ns/doap#" 
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+         xmlns:asfext="http://projects.apache.org/ns/asfext#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  <Project rdf:about="http://qpid.apache.org">
+    <created>2009-01-21</created>
+    <license rdf:resource="http://usefulinc.com/doap/licenses/asl20" />
+    <name>Apache Qpid</name>
+    <homepage rdf:resource="http://qpid.apache.org" />
+    <asfext:pmc rdf:resource="http://qpid.apache.org" />
+    <shortdesc>AMQP enterprise messaging implementation.</shortdesc>
+    <description>Apache Qpid implements the latest AMQP specification, the first open standard for enterprise messaging, and provides transaction management, queuing, distribution, security, management, clustering, federation and heterogeneous multi-platform support and a lot more.</description>
+    <bug-database rdf:resource="http://issues.apache.org/jira/browse/qpid" />
+    <bug-database rdf:resource="http://issues.apache.org/jira/browse/PROTON" />
+    <mailing-list rdf:resource="http://qpid.apache.org/discussion.html" />
+    <download-page rdf:resource="http://qpid.apache.org/download.html" />
+    <programming-language>C++</programming-language>
+    <programming-language>Java</programming-language>
+    <programming-language>C#</programming-language>
+    <programming-language>Perl</programming-language>
+    <programming-language>Python</programming-language>
+    <programming-language>Ruby</programming-language>
+    <category rdf:resource="http://projects.apache.org/category/network-server" />
+    <category rdf:resource="http://projects.apache.org/category/network-client" />
+    <release>
+      <Version>
+        <name>Apache Qpid 0.30</name>
+        <created>2014-09-26</created>
+        <revision>0.30</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache Qpid 0.28</name>
+        <created>2014-06-03</created>
+        <revision>0.28</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache Qpid 0.26</name>
+        <created>2014-02-18</created>
+        <revision>0.26</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache Qpid 0.24</name>
+        <created>2013-09-07</created>
+        <revision>0.24</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache Qpid Proton 0.5</name>
+        <created>2013-08-29</created>
+        <revision>0.5</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache Qpid 0.22</name>
+        <created>2013-06-13</created>
+        <revision>0.22</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache Qpid 0.20</name>
+        <created>2013-01-23</created>
+        <revision>0.20</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache Qpid 0.18</name>
+        <created>2012-08-30</created>
+        <revision>0.18</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache Qpid 0.16</name>
+        <created>2012-05-19</created>
+        <revision>0.16</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache Qpid 0.14</name>
+        <created>2012-01-26</created>
+        <revision>0.14</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache Qpid 0.12</name>
+        <created>2011-08-24</created>
+        <revision>0.12</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache Qpid 0.10</name>
+        <created>2011-04-29</created>
+        <revision>0.10</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache Qpid 0.8</name>
+        <created>2010-12-07</created>
+        <revision>0.8</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache Qpid 0.6</name>
+        <created>2010-03-25</created>
+        <revision>0.6</revision>
+      </Version>
+    </release>
+    <repository>
+      <SVNRepository>
+        <location rdf:resource="https://svn.apache.org/repos/asf/qpid/trunk/qpid/"/>
+        <browse rdf:resource="http://svn.apache.org/viewvc/qpid/trunk/qpid"/>
+      </SVNRepository>
+    </repository>
+    <repository>
+      <SVNRepository>
+        <location rdf:resource="https://svn.apache.org/repos/asf/qpid/proton/trunk/"/>
+        <browse rdf:resource="http://svn.apache.org/viewvc/qpid/proton/trunk"/>
+      </SVNRepository>
+    </repository>
+    <asfext:implements>
+       <asfext:Standard>
+        <asfext:title>OASIS Advanced Message Queueing Protocol (AMQP)</asfext:title>
+        <asfext:body>OASIS</asfext:body>
+        <asfext:id>AMQP 1.0</asfext:id>
+        <asfext:url rdf:resource="http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-overview-v1.0-os.html"/>
+      </asfext:Standard>
+    </asfext:implements>
+    <asfext:implements>
+      <asfext:Standard>
+        <asfext:title>Advanced Message Queueing Protocol (AMQP)</asfext:title>
+        <asfext:body>AMQP Working Group</asfext:body>
+        <asfext:id>AMQP 0-8, AMQP 0-9, AMQP 0-9-1, AMQP 0-10</asfext:id>
+        <asfext:url rdf:resource="http://www.amqp.org"/>
+      </asfext:Standard>
+    </asfext:implements>
+  </Project>
+</rdf:RDF>
