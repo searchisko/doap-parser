@@ -54,7 +54,9 @@
       "type": "string"
     },
 
-    // Copy of "sys_project_name"
+    // DOAP: n/a
+    // Magnolia: n/a
+    // Copy of "sys_project_name" can be used.
     "sys_title": {
       "description": "Copy of sys_project_name",
       "type": "string"
