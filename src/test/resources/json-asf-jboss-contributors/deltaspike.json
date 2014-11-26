@@ -1,0 +1,16 @@
+{
+  "homepage" : "http://deltaspike.apache.org",
+  "category" : [ "http://projects.apache.org/category/javaee" ],
+  "license" : "http://usefulinc.com/doap/licenses/asl20",
+  "maintainer" : [ {
+    "name" : "Mark Struberg",
+    "mbox" : "mailto:struberg@apache.org"
+  } ],
+  "sys_project_name" : "Apache DeltaSpike",
+  "sys_created" : "2014-04-11",
+  "sys_description" : "DeltaSpike is a collection of portable Extensions for CDI Containers",
+  "sys_content" : "Apache DeltaSpike is a portable JSR-299 CDI (Contexts and Dependency Injection for Java) Extension library which contains lots of useful tools and helpers which are missing in the CDI core spec.\n\nDeltaSpike is not a CDI-container itself, but a portable\nExtension library which can run on all CDI-containers!\n\nDeltaSpike is tested and runs on many Java EE Servers like Apache TomEE, Red Hat JBoss Application Server, JBoss Wildfly, Oracle WebLogic, Oracle Glassfish, IBM WebSphere, and also on simple Servlet containers like Apache Tomcat or Jetty in combination with either JBoss Weld or Apache OpenWebBeans.",
+  "mailing-list" : "http://deltaspike.apache.org/community.html#mailing-lists",
+  "bug-database" : "https://issues.apache.org/jira/browse/DELTASPIKE",
+  "programming-language" : [ "Java" ]
+}

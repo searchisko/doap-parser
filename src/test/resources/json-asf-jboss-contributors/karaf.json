@@ -1,0 +1,17 @@
+{
+  "homepage" : "http://karaf.apache.org",
+  "category" : [ "http://projects.apache.org/category/osgi", "http://projects.apache.org/category/network-server" ],
+  "license" : "http://usefulinc.com/doap/licenses/asl20",
+  "maintainer" : [ {
+    "name" : "Guillaume Nodet",
+    "mbox" : "mailto:gnodet@apache.org"
+  } ],
+  "sys_project_name" : "Apache Karaf",
+  "sys_created" : "2006-03-28",
+  "sys_description" : "Apache Karaf is an OSGi distribution for server-side applications.",
+  "sys_content" : "Apache Karaf is a small OSGi based runtime which provides a lightweight container onto which various components and applications can be deployed.",
+  "mailing-list" : "http://karaf.apache.org/mailing-lists.html",
+  "download-page" : "http://karaf.apache.org/download.html",
+  "bug-database" : "https://issues.apache.org/jira/browse/KARAF",
+  "programming-language" : [ "Java" ]
+}

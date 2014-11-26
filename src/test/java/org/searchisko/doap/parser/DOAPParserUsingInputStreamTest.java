@@ -38,7 +38,7 @@ public class DOAPParserUsingInputStreamTest extends DOAPParserSupport {
 		parser.loadInputStream(getInputStreamFromClasspathFile(path));
 		Project project = parser.getProject();
 		String json = Converter.objectToJSON(project);
-		JSONAssert.assertEquals(readStringFromClasspathFile("/doap-json/narayana.json"), json, JSONCompareMode.NON_EXTENSIBLE);
+		JSONAssert.assertEquals(readStringFromClasspathFile("/json-jboss-examples/narayana.json"), json, JSONCompareMode.NON_EXTENSIBLE);
 	}
 
 	@Test
@@ -47,7 +47,7 @@ public class DOAPParserUsingInputStreamTest extends DOAPParserSupport {
 		parser.loadInputStream(getInputStreamFromClasspathFile(path));
 		Project project = parser.getProject();
 		String json = Converter.objectToJSON(project);
-		JSONAssert.assertEquals(readStringFromClasspathFile("/doap-json/snowdrop.json"), json, JSONCompareMode.NON_EXTENSIBLE);
+		JSONAssert.assertEquals(readStringFromClasspathFile("/json-jboss-examples/snowdrop.json"), json, JSONCompareMode.NON_EXTENSIBLE);
 	}
 
 	@Test
@@ -56,6 +56,6 @@ public class DOAPParserUsingInputStreamTest extends DOAPParserSupport {
 		parser.loadInputStream(getInputStreamFromClasspathFile(path));
 		Project project = parser.getProject();
 		String json = Converter.objectToJSON(project);
-		JSONAssert.assertEquals(readStringFromClasspathFile("/doap-json/liveoak.json"), json, JSONCompareMode.NON_EXTENSIBLE);
+		JSONAssert.assertEquals(readStringFromClasspathFile("/json-jboss-examples/liveoak.json"), json, JSONCompareMode.NON_EXTENSIBLE);
 	}
 }

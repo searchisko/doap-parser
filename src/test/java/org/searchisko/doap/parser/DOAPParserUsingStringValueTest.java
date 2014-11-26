@@ -38,29 +38,72 @@ public class DOAPParserUsingStringValueTest extends DOAPParserSupport {
 		parser.repositoryClose();
 	}
 
-	/**
-	 * Test parsing of project.
-	 * @throws Exception
-	 */
+    @Test
+    public void testActiveMQProjectParsing() throws Exception {
+        checkEquals("activemq");
+    }
+
 	@Test
 	public void testCamelProjectParsing() throws Exception {
-		parser.loadLocalFile(getClass().getResource("/doap-asf-jboss-contributions/doap_camel.rdf").getPath());
-		Project project = parser.getProject();
-		String json = Converter.objectToJSON(project);
-		JSONAssert.assertEquals(readStringFromClasspathFile("/doap-json/camel.json"), json, JSONCompareMode.NON_EXTENSIBLE);
+        checkEquals("camel");
 	}
 
-	/**
-	 * Test parsing of project.
-	 * @throws Exception
-	 */
+    @Test
+    public void testCuratorProjectParsing() throws Exception {
+        checkEquals("curator");
+    }
+
+    @Test
+    public void testCXFProjectParsing() throws Exception {
+        checkEquals("cxf");
+    }
+
+    @Test
+    public void testDeltaSpikeProjectParsing() throws Exception {
+        checkEquals("deltaspike");
+    }
+
+    @Test
+    public void testFelixProjectParsing() throws Exception {
+        checkEquals("felix");
+    }
+
+    @Test
+    public void testJCloudsProjectParsing() throws Exception {
+        checkEquals("jclouds");
+    }
+
 	@Test
-	public void testMavenProjectParsing() throws Exception {
-		parser.loadLocalFile(getClass().getResource("/doap-asf-jboss-contributions/doap_maven.rdf").getPath());
-		Project project = parser.getProject();
-		String json = Converter.objectToJSON(project);
-		JSONAssert.assertEquals(readStringFromClasspathFile("/doap-json/maven.json"), json, JSONCompareMode.NON_EXTENSIBLE);
+	public void testKarafProjectParsing() throws Exception {
+        checkEquals("karaf");
 	}
+
+    @Test
+    public void testMavenProjectParsing() throws Exception {
+        checkEquals("maven");
+    }
+
+    @Test
+    public void testODEProjectParsing() throws Exception {
+        checkEquals("ODE");
+    }
+
+    @Test
+    public void testQPidProjectParsing() throws Exception {
+        checkEquals("qpid");
+    }
+
+    @Test
+    public void testServiceMixProjectParsing() throws Exception {
+        checkEquals("servicemix");
+    }
+
+    protected void checkEquals(String projectName) throws Exception {
+        parser.loadLocalFile(getClass().getResource("/doap-asf-jboss-contributions/doap_"+projectName+".rdf").getPath());
+        Project project = parser.getProject();
+        String json = Converter.objectToJSON(project);
+        JSONAssert.assertEquals(readStringFromClasspathFile("/json-asf-jboss-contributors/"+projectName+".json"), json, JSONCompareMode.NON_EXTENSIBLE);
+    }
 
 	/**
 	 * Test parsing of person objects from project.

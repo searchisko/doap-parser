@@ -1,0 +1,22 @@
+{
+  "homepage" : "http://ode.apache.org",
+  "release" : [ {
+    "name" : "1.3.4",
+    "created" : "2010-06-09",
+    "revision" : "tagged"
+  } ],
+  "category" : [ "http://projects.apache.org/category/network-server", "http://projects.apache.org/category/xml" ],
+  "license" : "http://usefulinc.com/doap/licenses/asl20",
+  "maintainer" : [ {
+    "name" : "Tammo van Lessen",
+    "mbox" : "mailto:vanto@apache.org"
+  } ],
+  "sys_project_name" : "Apache ODE",
+  "sys_created" : "2007-07-31",
+  "sys_description" : "Apache ODE is a WS-BPEL implementation that supports web services orchestration using flexible process definitions.",
+  "sys_content" : "Apache ODE (Orchestration Director Engine) executes business processes written following the WS-BPEL standard. It talks to web services, sending and receiving messages, handling data manipulation and error recovery as described by your process definition. It supports both long and short living process executions to orchestrate all the services that are part of your application.\n\nWS-BPEL is an XML-based language defining several constructs to write business processes. It defines a set of basic control structures like conditions or loops as well as elements to invoke web services and receive messages from services. It relies on WSDL to express web services interfaces. Message structures can be manipulated, assigning parts or the whole of them to variables that can in turn be used to send other messages.",
+  "mailing-list" : "http://ode.apache.org/mailing-lists.html",
+  "download-page" : "http://ode.apache.org/getting-ode.html",
+  "bug-database" : "https://issues.apache.org/jira/browse/ODE",
+  "programming-language" : [ "Java" ]
+}
