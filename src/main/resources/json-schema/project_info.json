@@ -279,19 +279,9 @@
       }
     },
 
-    // DOAP: containsProjects: JBoss extension
+    // DOAP: consumesProjects: JBoss extension
     // Magnolia: n/a
-    "containsProjects" : {
-      "description": "",
-      "type": "object",
-        "properties": {
-          "name": { "type": "string"}
-       }
-    },
-
-    // DOAP: containedWithinProjects: JBoss extension
-    // Magnolia: n/a
-    "containedWithinProjects" : {
+    "consumesProjects" : {
       "description": "",
       "type": "object",
         "properties": {
