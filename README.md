@@ -8,7 +8,7 @@ We can take Apache Camel DOAP file: <http://svn.apache.org/repos/asf/camel/trunk
 and have it transformed to the following JSON document:
 
     {
-      "name" : "Apache Camel",
+      "sys_project_name" : "Apache Camel",
       "homepage" : "http://camel.apache.org/",
       "created" : "2008-12-17",
       "shortdesc" : "Apache Camel is a powerful open source integration framework based on known Enterprise Integration Patterns.",

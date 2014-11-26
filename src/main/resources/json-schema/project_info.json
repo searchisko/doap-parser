@@ -43,12 +43,12 @@
     // DOAP: name
     // Magnolia: sys_content_id
     "sys_project": {
-      "description": "Normalized Project code populated by Searchisko",
+      "description": "Normalized Project code populated by Searchisko based on sys_project_name",
       "type": "string"
     },
 
     "sys_project_name": {
-      "description": "Normalized Human readable Project name populated by Searchisko",
+      "description": "Normalized Human readable Project name populated by client",
       "type": "string"
     },
 
@@ -328,7 +328,7 @@
     "hudsonLink" : {"type" : "uri"}
     */
   },
-  "required": ["sys_project", "homepage"],
+  "required": ["sys_project_name", "homepage"],
   "additionalProperties" : false
 
 }

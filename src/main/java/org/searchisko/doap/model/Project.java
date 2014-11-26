@@ -32,7 +32,7 @@ import java.util.Collection;
 @RDFBean("doap:Project")
 public class Project {
 
-	private String name;
+	private String sys_project_name;
 	private URI homepage;
 	@JsonProperty("old-homepage")
 	private URI old_homepage;
@@ -69,12 +69,12 @@ public class Project {
 	private URI blog;
 
 	@RDF("doap:name")
-	public String getName() {
-		return this.name;
+	public String getSys_project_name() {
+		return this.sys_project_name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setSys_project_name(String sys_project_name) {
+		this.sys_project_name = sys_project_name;
 	}
 
 	@RDF("doap:homepage")

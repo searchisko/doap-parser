@@ -1,5 +1,5 @@
 {
-  "name" : "Apache Maven",
+  "sys_project_name" : "Apache Maven",
   "homepage" : "http://maven.apache.org/",
   "created" : "2001",
   "shortdesc" : "Maven is a project development management and comprehension tool.",

@@ -32,7 +32,7 @@ public class DOAPParserUsingInputStreamTest extends DOAPParserSupport {
 	}
 
 	@Test
-	public void testNarayanaProjectParsingFails() throws Exception {
+	public void testNarayanaProjectParsing() throws Exception {
 //		URI uri = new URI("https://raw.githubusercontent.com/jbosstm/project-metadata/master/narayana.rdf");
 		String path = "/doap-jboss-examples/narayana.rdf";
 		parser.loadInputStream(getInputStreamFromClasspathFile(path));
@@ -42,7 +42,7 @@ public class DOAPParserUsingInputStreamTest extends DOAPParserSupport {
 	}
 
 	@Test
-	public void testSnowdropProjectParsingFails() throws Exception {
+	public void testSnowdropProjectParsing() throws Exception {
 		String path = "/doap-jboss-examples/snowdrop.rdf";
 		parser.loadInputStream(getInputStreamFromClasspathFile(path));
 		Project project = parser.getProject();
@@ -51,7 +51,7 @@ public class DOAPParserUsingInputStreamTest extends DOAPParserSupport {
 	}
 
 	@Test
-	public void testLiveOakProjectParsingFails() throws Exception {
+	public void testLiveOakProjectParsing() throws Exception {
 		String path = "/doap-jboss-examples/liveoak.rdf";
 		parser.loadInputStream(getInputStreamFromClasspathFile(path));
 		Project project = parser.getProject();

@@ -34,6 +34,6 @@ public class SchemaValidatorTest {
 			cnt++;
 			System.out.println(m.toString());
 		}
-		assertEquals(2, cnt);
+		assertEquals(1, cnt);
 	}
 }
