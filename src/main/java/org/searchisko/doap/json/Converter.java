@@ -6,9 +6,9 @@
 
 package org.searchisko.doap.json;
 
-import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.map.SerializationConfig;
-import org.codehaus.jackson.map.annotate.JsonSerialize;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,8 +24,8 @@ public class Converter {
 
 	// configure JSON output format
 	static {
-		mapper.enable(SerializationConfig.Feature.INDENT_OUTPUT);
-		mapper.setSerializationInclusion(JsonSerialize.Inclusion.NON_NULL);
+		mapper.enable(SerializationFeature.INDENT_OUTPUT);
+		mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
 	}
 
 	public static String objectToJSON(Object object) throws IOException {

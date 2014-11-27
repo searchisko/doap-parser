@@ -14,7 +14,7 @@
 		<!--<sesame.version>2.7.13</sesame.version>-->
 		<rdfbeans.version>2.1</rdfbeans.version>
 		<rdf2go.version>4.8.3</rdf2go.version>
-		<jackson.version>1.9.13</jackson.version>
+		<jackson.version>2.4.0</jackson.version>
 		<fge.version>2.2.5</fge.version>
 		<arg4sj.version>2.0.29</arg4sj.version>
 		<slf4j.version>1.7.7</slf4j.version>

@@ -6,10 +6,10 @@
 
 package org.searchisko.doap.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.viceversatech.rdfbeans.annotations.RDF;
 import com.viceversatech.rdfbeans.annotations.RDFBean;
 import com.viceversatech.rdfbeans.annotations.RDFNamespaces;
-import org.codehaus.jackson.annotate.JsonProperty;
 
 import java.util.Collection;
 
