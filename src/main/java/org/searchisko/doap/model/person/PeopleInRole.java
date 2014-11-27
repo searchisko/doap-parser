@@ -9,6 +9,7 @@ package org.searchisko.doap.model.person;
 * @author Lukas Vlcek (lvlcek@redhat.com)
 */
 public enum PeopleInRole {
+	LEAD("lead"),
 	MAINTAIER("maintainer"),
 	DEVELOPER("developer"),
 	DOCUMENTER("documenter"),

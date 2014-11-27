@@ -6,6 +6,8 @@
 
 package org.searchisko.doap.model.person;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.viceversatech.rdfbeans.annotations.RDF;
 import com.viceversatech.rdfbeans.annotations.RDFBean;
 import com.viceversatech.rdfbeans.annotations.RDFNamespaces;
@@ -28,6 +30,7 @@ import java.net.URI;
 public class Person {
 
 	private String name;
+	@JsonIgnore
 	private URI mbox;
 
 	/**
@@ -56,6 +59,18 @@ public class Person {
 
 	public void setMbox(URI mbox) {
 		this.mbox = mbox;
+	}
+
+	@JsonProperty("email")
+	public String getEmail() {
+		if (this.mbox == null) {
+			return null;
+		}
+		if (this.mbox.isOpaque()) {
+			return this.mbox.toString().substring("mailto:".length());
+		}
+		// if not opaque we do not know what to do
+		return this.mbox.toString();
 	}
 
 }

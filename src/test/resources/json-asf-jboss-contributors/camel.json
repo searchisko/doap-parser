@@ -4,7 +4,7 @@
   "maintainer": [
     {
       "name": "Christian Mueller",
-      "mbox": "mailto:cmueller@apache.org"
+      "email": "cmueller@apache.org"
     }
   ],
   "sys_project_name": "Apache Camel",

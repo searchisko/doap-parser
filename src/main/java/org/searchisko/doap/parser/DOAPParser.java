@@ -155,23 +155,21 @@ public class DOAPParser {
 				Collection<Repository> repositories = (Collection<Repository>) getArchRepository();
 				project.setRepository(repositories.isEmpty() ? null : repositories);
 
+				Collection<Person> leads = getLeads();
 				Collection<Person> maintainers = getMaintainers();
-				project.setMaintainer(maintainers.isEmpty() ? null : maintainers);
-
 				Collection<Person> developers = getDevelopers();
-				project.setDeveloper(developers.isEmpty() ? null : developers);
-
 				Collection<Person> documenters = getDocumenters();
-				project.setDocumenter(documenters.isEmpty() ? null : documenters);
-
 				Collection<Person> translators = getTranslators();
-				project.setTranslator(translators.isEmpty() ? null : translators);
-
 				Collection<Person> helpers = getHelper();
-				project.setHelper(helpers.isEmpty() ? null : helpers);
-
 				Collection<Person> testers = getTester();
+//				/*
+				project.setMaintainer(maintainers.isEmpty() ? null : maintainers);
+				project.setDeveloper(developers.isEmpty() ? null : developers);
+				project.setDocumenter(documenters.isEmpty() ? null : documenters);
+				project.setTranslator(translators.isEmpty() ? null : translators);
+				project.setHelper(helpers.isEmpty() ? null : helpers);
 				project.setTester(testers.isEmpty() ? null : testers);
+//				*/
 			}
 			return project;
 		} else {
@@ -330,6 +328,15 @@ public class DOAPParser {
 	 * @return
 	 * @throws RDFBeanException
 	 */
+	public Collection<Person> getLeads() throws RDFBeanException, RepositoryException {
+		return getPeopleInRole(PeopleInRole.LEAD);
+	}
+
+	/**
+	 *
+	 * @return
+	 * @throws RDFBeanException
+	 */
 	public Collection<Person> getMaintainers() throws RDFBeanException, RepositoryException {
 		return getPeopleInRole(PeopleInRole.MAINTAIER);
 	}
@@ -381,7 +388,7 @@ public class DOAPParser {
 
 	private Collection<Person> getPeopleInRole(PeopleInRole role) throws RDFBeanException, RepositoryException {
 		checkRepository();
-		Collection<Person> maintainers = new ArrayList<Person>();
+		Collection<Person> persons = new ArrayList<Person>();
 
 		String query = "" +
 				"PREFIX doap: <http://usefulinc.com/ns/doap#> " +
@@ -404,7 +411,7 @@ public class DOAPParser {
 					person.setName(name.stringValue());
 					person.setMbox(new URI(mbox.stringValue()));
 					log.info(role.getRoleName() + " name: {}, mbox: {}", person.getName(), person.getMbox());
-					maintainers.add(person);
+					persons.add(person);
 				}
 			} finally {
 				result.close();
@@ -412,6 +419,6 @@ public class DOAPParser {
 		} catch (Exception e) {
 			log.error("Error querying " + role.getRoleName(), e);
 		}
-		return maintainers;
+		return persons;
 	}
 }

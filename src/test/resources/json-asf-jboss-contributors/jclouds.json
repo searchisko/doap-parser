@@ -4,7 +4,7 @@
   "maintainer": [
     {
       "name": "Apache jclouds PMC",
-      "mbox": "mailto:private@jclouds.apache.org"
+      "email": "private@jclouds.apache.org"
     }
   ],
   "sys_project_name": "Apache jclouds",
@@ -37,5 +37,5 @@
   "mailing-list": "http://jclouds.apache.org/community/",
   "download-page": "http://jclouds.apache.org/start/install/",
   "bug-database": "https://issues.apache.org/jira/browse/JCLOUDS",
-  "programming-language": ["Java"]
+  "programming-language": [ "Java" ]
 }

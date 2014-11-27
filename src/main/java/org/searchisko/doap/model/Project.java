@@ -18,7 +18,10 @@ import java.net.URI;
 import java.util.Collection;
 
 /**
- * Project DOAP model based on specification: http://usefulinc.com/ns/doap
+ * Project model.
+ *
+ * It is partly based on DOAP specification: http://usefulinc.com/ns/doap
+ * and partly based on JBoss specific DOAP extension.
  *
  * We had to change characters in field names that contained dash to underscore.
  * For example: 'mailing-list' -> 'mailing_list'. For JSON serialization we added

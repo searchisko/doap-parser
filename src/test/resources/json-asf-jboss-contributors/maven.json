@@ -4,46 +4,46 @@
   "maintainer": [
     {
       "name": "Jason van Zyl",
-      "mbox": "mailto:jason@sonatype.com"
+      "email": "jason@sonatype.com"
     }, {
       "name": "Brett Porter",
-      "mbox": "mailto:brett@apache.org"
+      "email": "brett@apache.org"
     }, {
       "name": "Emmanuel Venisse",
-      "mbox": "mailto:evenisse@apache.org"
+      "email": "evenisse@apache.org"
     }, {
       "name": "Kenney Westerhof",
-      "mbox": "mailto:kenney@apache.org"
+      "email": "kenney@apache.org"
     }, {
       "name": "Stephane Nicoll",
-      "mbox": "mailto:snicoll@apache.org"
+      "email": "snicoll@apache.org"
     }, {
       "name": "Vincent Massol",
-      "mbox": "mailto:vmassol@apache.org"
+      "email": "vmassol@apache.org"
     }, {
       "name": "Fabrizio Giustina",
-      "mbox": "mailto:fgiust@apache.org"
+      "email": "fgiust@apache.org"
     }, {
       "name": "Edwin Punzalan",
-      "mbox": "mailto:epunzalan@mergere.com"
+      "email": "epunzalan@mergere.com"
     }, {
       "name": "Mike Perham",
-      "mbox": "mailto:mperham@gmail.com"
+      "email": "mperham@gmail.com"
     }, {
       "name": "John Casey",
-      "mbox": "mailto:jdcasey@apache.org"
+      "email": "jdcasey@apache.org"
     }, {
       "name": "Trygve Laugstol",
-      "mbox": "mailto:trygvis@apache.org"
+      "email": "trygvis@apache.org"
     }, {
       "name": "Vincent Siveton",
-      "mbox": "mailto:vsiveton@apache.org"
+      "email": "vsiveton@apache.org"
     }, {
       "name": "Carlos Sanchez",
-      "mbox": "mailto:carlos@apache.org"
+      "email": "carlos@apache.org"
     }, {
       "name": "Dennis Lundberg",
-      "mbox": "mailto:dennisl@apache.org"
+      "email": "dennisl@apache.org"
     }
   ],
   "sys_project_name": "Apache Maven",
@@ -196,5 +196,5 @@
   "mailing-list": "http://maven.apache.org/mail-lists.html",
   "download-page": "http://maven.apache.org/download.html",
   "bug-database": "http://jira.codehaus.org/browse/MNG",
-  "programming-language": ["Java"]
+  "programming-language": [ "Java" ]
 }

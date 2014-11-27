@@ -9,22 +9,20 @@ and have it transformed to the following JSON document:
 
 ````json
 {
-  "homepage": "http://camel.apache.org/",
-  "license": "http://usefulinc.com/doap/licenses/asl20",
-  "maintainer": [
-    {
-      "name": "Christian Mueller",
-      "mbox": "mailto:cmueller@apache.org"
-    }
-  ],
-  "sys_project_name": "Apache Camel",
-  "sys_created": "2008-12-17",
-  "sys_description": "Apache Camel is a powerful open source integration framework based on known Enterprise Integration Patterns.",
-  "sys_content": "Apache Camel is a powerful open source integration framework based on known Enterprise Integration Patterns.\nRules for Camel's routing and mediation engine can be defined in either a Java based DSL, XML or using DSLs for dynamic languages such as Groovy or Scala.",
-  "mailing-list": "http://camel.apache.org/mailing-lists.html",
-  "download-page": "http://camel.apache.org/download.html",
-  "bug-database": "http://issues.apache.org/activemq/browse/CAMEL",
-  "programming-language": [ "SQL", "PHP", "Scala", "Ruby", "Groovy", "XML", "Python", "JavaScript", "Java" ]
+  "homepage" : "http://camel.apache.org/",
+  "license" : "http://usefulinc.com/doap/licenses/asl20",
+  "maintainer" : [ {
+    "name" : "Christian Mueller",
+    "email" : "cmueller@apache.org"
+  } ],
+  "sys_project_name" : "Apache Camel",
+  "sys_created" : "2008-12-17",
+  "sys_description" : "Apache Camel is a powerful open source integration framework based on known Enterprise Integration Patterns.",
+  "sys_content" : "Apache Camel is a powerful open source integration framework based on known Enterprise Integration Patterns.\nRules for Camel's routing and mediation engine can be defined in either a Java based DSL, XML or using DSLs for dynamic languages such as Groovy or Scala.",
+  "mailing-list" : "http://camel.apache.org/mailing-lists.html",
+  "download-page" : "http://camel.apache.org/download.html",
+  "bug-database" : "http://issues.apache.org/activemq/browse/CAMEL",
+  "programming-language" : [ "SQL", "PHP", "Scala", "Ruby", "Groovy", "XML", "Python", "JavaScript", "Java" ]
 }
 ````
 
