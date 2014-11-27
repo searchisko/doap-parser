@@ -1,6 +1,56 @@
 {
   "homepage": "http://maven.apache.org/",
-  "release": [
+  "license": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+  "maintainer": [
+    {
+      "name": "Jason van Zyl",
+      "mbox": "mailto:jason@sonatype.com"
+    }, {
+      "name": "Brett Porter",
+      "mbox": "mailto:brett@apache.org"
+    }, {
+      "name": "Emmanuel Venisse",
+      "mbox": "mailto:evenisse@apache.org"
+    }, {
+      "name": "Kenney Westerhof",
+      "mbox": "mailto:kenney@apache.org"
+    }, {
+      "name": "Stephane Nicoll",
+      "mbox": "mailto:snicoll@apache.org"
+    }, {
+      "name": "Vincent Massol",
+      "mbox": "mailto:vmassol@apache.org"
+    }, {
+      "name": "Fabrizio Giustina",
+      "mbox": "mailto:fgiust@apache.org"
+    }, {
+      "name": "Edwin Punzalan",
+      "mbox": "mailto:epunzalan@mergere.com"
+    }, {
+      "name": "Mike Perham",
+      "mbox": "mailto:mperham@gmail.com"
+    }, {
+      "name": "John Casey",
+      "mbox": "mailto:jdcasey@apache.org"
+    }, {
+      "name": "Trygve Laugstol",
+      "mbox": "mailto:trygvis@apache.org"
+    }, {
+      "name": "Vincent Siveton",
+      "mbox": "mailto:vsiveton@apache.org"
+    }, {
+      "name": "Carlos Sanchez",
+      "mbox": "mailto:carlos@apache.org"
+    }, {
+      "name": "Dennis Lundberg",
+      "mbox": "mailto:dennisl@apache.org"
+    }
+  ],
+  "sys_project_name": "Apache Maven",
+  "sys_created": "2001",
+  "sys_description": "Maven is a project development management and comprehension tool.",
+  "sys_content": "Maven is a project development management and comprehension tool. Based on the concept of a project object model: builds, dependency management, documentation creation, site publication, and distribution publication are all controlled from the declarative file. Maven can be extended by plugins to utilise a number of other development tools for reporting or the build process.",
+  "releases": [
     {
       "name": "Latest stable release",
       "created": "2012-01-20",
@@ -11,8 +61,7 @@
         "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0.4-bin.tar.gz",
         "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0.4-bin.zip"
       ]
-    },
-    {
+    }, {
       "name": "Apache Maven 3.0.3",
       "created": "2011-03-03",
       "revision": "3.0.3",
@@ -22,8 +71,7 @@
         "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0.3-bin.tar.gz",
         "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0.3-bin.zip"
       ]
-    },
-    {
+    }, {
       "name": "Apache Maven 3.0.2",
       "created": "2011-01-12",
       "revision": "3.0.2",
@@ -33,8 +81,7 @@
         "http://archive.apache.org/dist/maven/source/apache-maven-3.0.2-src.zip",
         "http://archive.apache.org/dist/maven/source/apache-maven-3.0.2-src.tar.gz"
       ]
-    },
-    {
+    }, {
       "name": "Apache Maven 3.0.1",
       "created": "2010-11-23",
       "revision": "3.0.1",
@@ -44,8 +91,7 @@
         "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0.1-bin.zip",
         "http://archive.apache.org/dist/maven/source/apache-maven-3.0.1-src.zip"
       ]
-    },
-    {
+    }, {
       "name": "Apache Maven 3.0",
       "created": "2010-10-04",
       "revision": "3.0",
@@ -55,8 +101,7 @@
         "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-bin.zip",
         "http://archive.apache.org/dist/maven/source/apache-maven-3.0-src.tar.gz"
       ]
-    },
-    {
+    }, {
       "name": "Apache Maven 2.2.1",
       "created": "2009-08-06",
       "revision": "2.2.1",
@@ -65,8 +110,7 @@
         "http://archive.apache.org/dist/maven/binaries/apache-maven-2.2.1-bin.tar.bz2",
         "http://archive.apache.org/dist/maven/binaries/apache-maven-2.2.1-bin.zip"
       ]
-    },
-    {
+    }, {
       "name": "Apache Maven 2.2.0",
       "created": "2009-07-01",
       "revision": "2.2.0",
@@ -75,8 +119,7 @@
         "http://archive.apache.org/dist/maven/binaries/apache-maven-2.2.0-bin.zip",
         "http://archive.apache.org/dist/maven/binaries/apache-maven-2.2.0-bin.tar.bz2"
       ]
-    },
-    {
+    }, {
       "name": "Apache Maven 2.1.0",
       "created": "2009-03-18",
       "revision": "2.1.0",
@@ -85,8 +128,7 @@
         "http://archive.apache.org/dist/maven/binaries/apache-maven-2.1.0-bin.tar.gz",
         "http://archive.apache.org/dist/maven/binaries/apache-maven-2.1.0-bin.zip"
       ]
-    },
-    {
+    }, {
       "name": "Apache Maven 2.0.11",
       "created": "2010-02-26",
       "revision": "2.0.11",
@@ -95,8 +137,7 @@
         "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.11-bin.tar.bz2",
         "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.11-bin.zip"
       ]
-    },
-    {
+    }, {
       "name": "Apache Maven 2.0.10",
       "created": "2009-02-18",
       "revision": "2.0.10",
@@ -105,8 +146,7 @@
         "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.10-bin.tar.gz",
         "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.10-bin.zip"
       ]
-    },
-    {
+    }, {
       "name": "Apache Maven 2.0.9",
       "created": "2008-04-10",
       "revision": "2.0.9",
@@ -115,8 +155,7 @@
         "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.9-bin.zip",
         "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.9-bin.tar.bz2"
       ]
-    },
-    {
+    }, {
       "name": "Apache Maven 2.0.8",
       "created": "2007-11-27",
       "revision": "2.0.8",
@@ -125,8 +164,7 @@
         "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.8-bin.tar.gz",
         "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.8-bin.zip"
       ]
-    },
-    {
+    }, {
       "name": "Apache Maven 2.0.7",
       "created": "2007-06-21",
       "revision": "2.0.7",
@@ -135,8 +173,7 @@
         "http://archive.apache.org/dist/maven/binaries/maven-2.0.7-bin.zip",
         "http://archive.apache.org/dist/maven/binaries/maven-2.0.7-bin.tar.bz2"
       ]
-    },
-    {
+    }, {
       "name": "Apache Maven 2.0.6",
       "created": "2007-04-01",
       "revision": "2.0.6",
@@ -145,8 +182,7 @@
         "http://archive.apache.org/dist/maven/binaries/maven-2.0.6-bin.tar.gz",
         "http://archive.apache.org/dist/maven/binaries/maven-2.0.6-bin.zip"
       ]
-    },
-    {
+    }, {
       "name": "Apache Maven 2.0.5",
       "created": "2007-02-14",
       "revision": "2.0.5",
@@ -157,69 +193,6 @@
       ]
     }
   ],
-  "license": "http://www.apache.org/licenses/LICENSE-2.0.txt",
-  "maintainer": [
-    {
-      "name": "Jason van Zyl",
-      "mbox": "mailto:jason@sonatype.com"
-    },
-    {
-      "name": "Brett Porter",
-      "mbox": "mailto:brett@apache.org"
-    },
-    {
-      "name": "Emmanuel Venisse",
-      "mbox": "mailto:evenisse@apache.org"
-    },
-    {
-      "name": "Kenney Westerhof",
-      "mbox": "mailto:kenney@apache.org"
-    },
-    {
-      "name": "Stephane Nicoll",
-      "mbox": "mailto:snicoll@apache.org"
-    },
-    {
-      "name": "Vincent Massol",
-      "mbox": "mailto:vmassol@apache.org"
-    },
-    {
-      "name": "Fabrizio Giustina",
-      "mbox": "mailto:fgiust@apache.org"
-    },
-    {
-      "name": "Edwin Punzalan",
-      "mbox": "mailto:epunzalan@mergere.com"
-    },
-    {
-      "name": "Mike Perham",
-      "mbox": "mailto:mperham@gmail.com"
-    },
-    {
-      "name": "John Casey",
-      "mbox": "mailto:jdcasey@apache.org"
-    },
-    {
-      "name": "Trygve Laugstol",
-      "mbox": "mailto:trygvis@apache.org"
-    },
-    {
-      "name": "Vincent Siveton",
-      "mbox": "mailto:vsiveton@apache.org"
-    },
-    {
-      "name": "Carlos Sanchez",
-      "mbox": "mailto:carlos@apache.org"
-    },
-    {
-      "name": "Dennis Lundberg",
-      "mbox": "mailto:dennisl@apache.org"
-    }
-  ],
-  "sys_project_name": "Apache Maven",
-  "sys_created": "2001",
-  "sys_description": "Maven is a project development management and comprehension tool.",
-  "sys_content": "Maven is a project development management and comprehension tool. Based on the concept of a project object model: builds, dependency management, documentation creation, site publication, and distribution publication are all controlled from the declarative file. Maven can be extended by plugins to utilise a number of other development tools for reporting or the build process.",
   "mailing-list": "http://maven.apache.org/mail-lists.html",
   "download-page": "http://maven.apache.org/download.html",
   "bug-database": "http://jira.codehaus.org/browse/MNG",

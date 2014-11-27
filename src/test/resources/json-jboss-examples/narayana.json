@@ -3,7 +3,7 @@
   "homepage" : "http://www.narayana.io",
   "sys_description" : "Narayana is the premier open source transaction manager.",
   "sys_content" : "With over 20 years of expertise in the area of transaction processing, Narayana is the premier open source transaction manager. It has been used extensively within industry and to drive standards including the OMG and Web Services.",
-  "release" : [ {
+  "releases" : [ {
     "name" : "",
     "created" : "2014-06-02",
     "revision" : "5.0.2.Final"

@@ -1,12 +1,12 @@
 {
-  "homepage" : "http://curator.apache.org/",
-  "license" : "http://usefulinc.com/doap/licenses/asl20",
-  "sys_project_name" : "Apache Curator",
-  "sys_created" : "2011-02-06",
-  "sys_description" : "A set of Java libraries that make using Apache ZooKeeper much easier.",
-  "sys_content" : "New users of ZooKeeper are surprised to learn that a significant amount of connection management must be done manually. For example, when the ZooKeeper client connects to the ensemble it must negotiate a new session, etc. This takes some time. If you use a ZooKeeper client API before the connection process has completed, ZooKeeper will throw an exception. These types of exceptions are referred to as \"recoverable\" errors. Curator automatically handles connection management, greatly simplifying client code. Instead of directly using the ZooKeeper APIs you use Curator APIs that internally check for connection completion and wrap each ZooKeeper API in a retry loop. Curator uses a retry mechanism to handle recoverable errors and automatically retry operations. The method of retry is customizable. Curator comes bundled with several implementations (ExponentialBackoffRetry, etc.) or custom implementations can be written.",
-  "mailing-list" : "http://curator.apache.org/mail-lists.html",
-  "download-page" : "http://www.apache.org/dyn/closer.cgi/curator/",
-  "bug-database" : "http://issues.apache.org/jira/browse/CURATOR",
-  "programming-language" : [ "Java" ]
+  "homepage": "http://curator.apache.org/",
+  "license": "http://usefulinc.com/doap/licenses/asl20",
+  "sys_project_name": "Apache Curator",
+  "sys_created": "2011-02-06",
+  "sys_description": "A set of Java libraries that make using Apache ZooKeeper much easier.",
+  "sys_content": "New users of ZooKeeper are surprised to learn that a significant amount of connection management must be done manually. For example, when the ZooKeeper client connects to the ensemble it must negotiate a new session, etc. This takes some time. If you use a ZooKeeper client API before the connection process has completed, ZooKeeper will throw an exception. These types of exceptions are referred to as \"recoverable\" errors. Curator automatically handles connection management, greatly simplifying client code. Instead of directly using the ZooKeeper APIs you use Curator APIs that internally check for connection completion and wrap each ZooKeeper API in a retry loop. Curator uses a retry mechanism to handle recoverable errors and automatically retry operations. The method of retry is customizable. Curator comes bundled with several implementations (ExponentialBackoffRetry, etc.) or custom implementations can be written.",
+  "mailing-list": "http://curator.apache.org/mail-lists.html",
+  "download-page": "http://www.apache.org/dyn/closer.cgi/curator/",
+  "bug-database": "http://issues.apache.org/jira/browse/CURATOR",
+  "programming-language": ["Java"]
 }

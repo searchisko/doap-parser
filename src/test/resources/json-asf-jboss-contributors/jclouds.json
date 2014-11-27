@@ -1,32 +1,5 @@
 {
   "homepage": "http://jclouds.apache.org",
-  "release": [
-    {
-      "name": "Apache jclouds 1.7.3",
-      "created": "2014-05-30",
-      "revision": "1.7.3"
-    },
-    {
-      "name": "Apache jclouds 1.7.2",
-      "created": "2014-04-15",
-      "revision": "1.7.2"
-    },
-    {
-      "name": "Apache jclouds 1.7.1",
-      "created": "2014-02-11",
-      "revision": "1.7.1"
-    },
-    {
-      "name": "Apache jclouds 1.7.0",
-      "created": "2013-12-23",
-      "revision": "1.7.0"
-    },
-    {
-      "name": "Apache jclouds 1.6.3",
-      "created": "2013-11-30",
-      "revision": "1.6.3"
-    }
-  ],
   "license": "http://usefulinc.com/doap/licenses/asl20",
   "maintainer": [
     {
@@ -38,6 +11,29 @@
   "sys_created": "2014-04-11",
   "sys_description": "The Java Multi-Cloud Toolkit",
   "sys_content": "Apache jclouds is an open source multi-cloud toolkit for the Java platform that gives you the freedom to create applications that are portable across clouds while giving you full control to use cloud-specific features.",
+  "releases": [
+    {
+      "name": "Apache jclouds 1.7.3",
+      "created": "2014-05-30",
+      "revision": "1.7.3"
+    }, {
+      "name": "Apache jclouds 1.7.2",
+      "created": "2014-04-15",
+      "revision": "1.7.2"
+    }, {
+      "name": "Apache jclouds 1.7.1",
+      "created": "2014-02-11",
+      "revision": "1.7.1"
+    }, {
+      "name": "Apache jclouds 1.7.0",
+      "created": "2013-12-23",
+      "revision": "1.7.0"
+    }, {
+      "name": "Apache jclouds 1.6.3",
+      "created": "2013-11-30",
+      "revision": "1.6.3"
+    }
+  ],
   "mailing-list": "http://jclouds.apache.org/community/",
   "download-page": "http://jclouds.apache.org/start/install/",
   "bug-database": "https://issues.apache.org/jira/browse/JCLOUDS",

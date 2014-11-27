@@ -3,7 +3,7 @@
   "homepage" : "http://liveoak.io/",
   "sys_description" : "LiveOak is a backend-as-a-service stack that simplifies development for mobile and standard web clients. Its goal is to enable client-side access to traditional backend services without having to write server-side code.",
   "sys_content" : "LiveOak is a backend-as-a-service stack that simplifies development for mobile and standard web clients. Its goal is to enable client-side access to traditional backend services without having to write server-side code.\n\nLiveOak's fundamental architectural approach is REST to the core. LiveOak provides publish/subscribe, push-to-the-mobile-client, and REST-based APIs to shuffle data between mobile handsets, traditional desktops, and other servers in a local cluster or in the cloud.",
-  "release" : [ {
+  "releases" : [ {
     "name" : "",
     "created" : "2014-05-27",
     "revision" : "1.0.0.Alpha01"

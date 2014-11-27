@@ -14,14 +14,5 @@
   "mailing-list": "http://activemq.apache.org/mailing-lists.html",
   "download-page": "http://activemq.apache.org/download.html",
   "bug-database": "http://issues.apache.org/activemq/browse/AMQ",
-  "programming-language": [
-    "C#",
-    "PHP",
-    "Ruby",
-    "C",
-    "Python",
-    "Perl",
-    "C++",
-    "Java"
-  ]
+  "programming-language": ["C#", "PHP", "Ruby", "C", "Python", "Perl", "C++", "Java"]
 }

@@ -14,15 +14,5 @@
   "mailing-list": "http://camel.apache.org/mailing-lists.html",
   "download-page": "http://camel.apache.org/download.html",
   "bug-database": "http://issues.apache.org/activemq/browse/CAMEL",
-  "programming-language": [
-    "SQL",
-    "PHP",
-    "Scala",
-    "Ruby",
-    "Groovy",
-    "XML",
-    "Python",
-    "JavaScript",
-    "Java"
-  ]
+  "programming-language": ["SQL", "PHP", "Scala", "Ruby", "Groovy", "XML", "Python", "JavaScript", "Java"]
 }

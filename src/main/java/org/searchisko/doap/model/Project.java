@@ -44,6 +44,7 @@ public class Project {
 	private String shortdesc;
     @JsonProperty("sys_content")
 	private String description;
+	@JsonProperty("releases")
 	private Collection<Version> release;
 	@JsonProperty("mailing-list")
 	private URI mailing_list;
