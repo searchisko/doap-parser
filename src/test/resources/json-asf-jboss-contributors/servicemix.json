@@ -1,17 +1,18 @@
 {
-  "homepage" : "http://servicemix.apache.org",
-  "category" : [ "http://projects.apache.org/category/network-server", "http://projects.apache.org/category/xml" ],
-  "license" : "http://usefulinc.com/doap/licenses/asl20",
-  "maintainer" : [ {
-    "name" : "Guillaume Nodet",
-    "mbox" : "mailto:gnodet@apache.org"
-  } ],
-  "sys_project_name" : "Apache ServiceMix",
-  "sys_created" : "2006-03-28",
-  "sys_description" : "Apache ServiceMix is an open source ESB implementing JBI.",
-  "sys_content" : "Apache ServiceMix is an open source distributed Enterprise Service Bus (ESB) and SOA toolkit built from the ground up on the semantics and APIs of the Java Business Integration (JBI) specification JSR 208 and released under the Apache license.",
-  "mailing-list" : "http://servicemix.apache.org/mailing-lists.html",
-  "download-page" : "http://servicemix.apache.org/download.html",
-  "bug-database" : "http://issues.apache.org/activemq/browse/SM",
-  "programming-language" : [ "Java" ]
+  "homepage": "http://servicemix.apache.org",
+  "license": "http://usefulinc.com/doap/licenses/asl20",
+  "maintainer": [
+    {
+      "name": "Guillaume Nodet",
+      "mbox": "mailto:gnodet@apache.org"
+    }
+  ],
+  "sys_project_name": "Apache ServiceMix",
+  "sys_created": "2006-03-28",
+  "sys_description": "Apache ServiceMix is an open source ESB implementing JBI.",
+  "sys_content": "Apache ServiceMix is an open source distributed Enterprise Service Bus (ESB) and SOA toolkit built from the ground up on the semantics and APIs of the Java Business Integration (JBI) specification JSR 208 and released under the Apache license.",
+  "mailing-list": "http://servicemix.apache.org/mailing-lists.html",
+  "download-page": "http://servicemix.apache.org/download.html",
+  "bug-database": "http://issues.apache.org/activemq/browse/SM",
+  "programming-language": ["Java"]
 }

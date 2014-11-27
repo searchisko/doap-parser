@@ -6,6 +6,7 @@
 
 package org.searchisko.doap.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.viceversatech.rdfbeans.annotations.RDF;
 import com.viceversatech.rdfbeans.annotations.RDFBean;
@@ -46,6 +47,7 @@ public class Project {
 	private Collection<Version> release;
 	@JsonProperty("mailing-list")
 	private URI mailing_list;
+	@JsonIgnore
 	private Collection<URI> category;
 	private URI license;
 	private Collection<Repository> repository;

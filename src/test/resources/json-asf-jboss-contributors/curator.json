@@ -1,6 +1,5 @@
 {
   "homepage" : "http://curator.apache.org/",
-  "category" : [ "http://projects.apache.org/category/database" ],
   "license" : "http://usefulinc.com/doap/licenses/asl20",
   "sys_project_name" : "Apache Curator",
   "sys_created" : "2011-02-06",

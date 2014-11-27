@@ -1,16 +1,17 @@
 {
-  "homepage" : "http://felix.apache.org",
-  "category" : [ "http://projects.apache.org/category/network-server" ],
-  "license" : "http://usefulinc.com/doap/licenses/asl20",
-  "maintainer" : [ {
-    "name" : "Felix PMC",
-    "mbox" : "mailto:dev@felix.apache.org"
-  } ],
-  "sys_project_name" : "Apache Felix",
-  "sys_created" : "2007-06-27",
-  "sys_description" : "OSGi framework implementation and related technologies.",
-  "mailing-list" : "http://felix.apache.org/site/mailinglists.html",
-  "download-page" : "http://felix.apache.org/site/downloads.cgi",
-  "bug-database" : "https://issues.apache.org/jira/browse/FELIX",
-  "programming-language" : [ "Java" ]
+  "homepage": "http://felix.apache.org",
+  "license": "http://usefulinc.com/doap/licenses/asl20",
+  "maintainer": [
+    {
+      "name": "Felix PMC",
+      "mbox": "mailto:dev@felix.apache.org"
+    }
+  ],
+  "sys_project_name": "Apache Felix",
+  "sys_created": "2007-06-27",
+  "sys_description": "OSGi framework implementation and related technologies.",
+  "mailing-list": "http://felix.apache.org/site/mailinglists.html",
+  "download-page": "http://felix.apache.org/site/downloads.cgi",
+  "bug-database": "https://issues.apache.org/jira/browse/FELIX",
+  "programming-language": ["Java"]
 }

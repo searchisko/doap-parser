@@ -24,7 +24,7 @@ public class SchemaValidatorTest {
 	@Test
 	public void testJSONSchema() throws IOException, ProcessingException {
 		ProcessingReport report = new SchemaValidator().validate(
-				getClass().getResourceAsStream("/json-jboss-examples/narayana.json")
+				getClass().getResourceAsStream("/json-asf-jboss-contributors/maven.json")
 		);
 		assertFalse(report.isSuccess());
 		int cnt = 0;
