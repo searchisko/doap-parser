@@ -20,8 +20,7 @@ import java.util.Collection;
 /**
  * Project model.
  *
- * It is partly based on DOAP specification: http://usefulinc.com/ns/doap
- * and partly based on JBoss specific DOAP extension.
+ * It is based on DOAP specification: http://usefulinc.com/ns/doap.
  *
  * We had to change characters in field names that contained dash to underscore.
  * For example: 'mailing-list' -> 'mailing_list'. For JSON serialization we added

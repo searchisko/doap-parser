@@ -1,1 +1,0 @@
-[`doap.xml`](doap.xml) is DOAP specification downloaded from <http://usefulinc.com/ns/doap>  

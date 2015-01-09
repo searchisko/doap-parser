@@ -1,0 +1,2 @@
+- [`doap.xml`](doap.xml) is DOAP specification downloaded from <http://usefulinc.com/ns/doap>
+- [`doap-extension.rdf`](doap-extension.rdf) is Red Hat DOAP extension from <https://github.com/jboss-developer/doap/blob/master/src/doap-extension.rdf>

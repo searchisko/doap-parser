@@ -19,6 +19,7 @@ import org.openrdf.rio.RDFFormat;
 import org.openrdf.rio.RDFParseException;
 import org.openrdf.sail.memory.MemoryStore;
 import org.searchisko.doap.model.Project;
+import org.searchisko.doap.model.RhtProject;
 import org.searchisko.doap.model.Version;
 import org.searchisko.doap.model.person.PeopleInRole;
 import org.searchisko.doap.model.person.Person;
@@ -148,6 +149,48 @@ public class DOAPParser {
 			log.error("No project found in repository");
 		} else if (projects.size() == 1) {
 			Project project = projects.iterator().next();
+			{
+				Collection<Version> versions = getVersions();
+				project.setRelease(versions.isEmpty() ? null : versions);
+
+				Collection<Repository> repositories = (Collection<Repository>) getArchRepository();
+				project.setRepository(repositories.isEmpty() ? null : repositories);
+
+//				Collection<Person> leads = getLeads();
+				Collection<Person> maintainers = getMaintainers();
+				Collection<Person> developers = getDevelopers();
+				Collection<Person> documenters = getDocumenters();
+				Collection<Person> translators = getTranslators();
+				Collection<Person> helpers = getHelper();
+				Collection<Person> testers = getTester();
+//				/*
+				project.setMaintainer(maintainers.isEmpty() ? null : maintainers);
+				project.setDeveloper(developers.isEmpty() ? null : developers);
+				project.setDocumenter(documenters.isEmpty() ? null : documenters);
+				project.setTranslator(translators.isEmpty() ? null : translators);
+				project.setHelper(helpers.isEmpty() ? null : helpers);
+				project.setTester(testers.isEmpty() ? null : testers);
+//				*/
+			}
+			return project;
+		} else {
+			log.error("Multiple projects found in repository");
+		}
+		return null;
+	}
+
+	/**
+	 * Get {@link RhtProject} from parser repository.
+	 *
+	 * @return
+	 * @throws RepositoryException
+	 */
+	public RhtProject getRhtProject() throws RepositoryException, RDFBeanException {
+		Collection<RhtProject> projects = deserializeFromRepository(RhtProject.class);
+		if (projects.size() == 0) {
+			log.error("No project found in repository");
+		} else if (projects.size() == 1) {
+			RhtProject project = projects.iterator().next();
 			{
 				Collection<Version> versions = getVersions();
 				project.setRelease(versions.isEmpty() ? null : versions);

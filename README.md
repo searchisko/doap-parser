@@ -31,6 +31,8 @@ and have it transformed to the following JSON document:
 This code is still WIP.
 
 The goal is to have DOAP (Description of a Project) file parser that can output JSON documents that we can easily index into Searchisko.
+In addition to DOAP format it also support Red Hat extension of DOAP. Example of DOAP extension RDF can be generated
+using online form <http://jboss-developer.github.io/doap/form.html>.
 
 ## License
 
